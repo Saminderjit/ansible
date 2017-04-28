@@ -1,0 +1,12 @@
+---
+
+- hosts: all 
+  vars:
+   - defaultPath: './testFile.py'
+   - destPath: './files/'
+   - sam: ['a','b']
+   - sim:
+  roles:
+   - test-role
+
+

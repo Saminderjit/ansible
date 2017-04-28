@@ -1,0 +1,976 @@
+2017-04-28 17:33:12,456 p=3154 u=ubuntu |   
+2017-04-28 17:33:12,456 p=3154 u=ubuntu |  /usr/bin/ansible-playbook ansible-playbook.yml
+2017-04-28 17:33:12,457 p=3154 u=ubuntu |   
+2017-04-28 17:33:12,464 p=3154 u=ubuntu |  ERROR: the 'action' and 'local_action' attributes can not be used together
+2017-04-28 17:34:03,535 p=3181 u=ubuntu |   
+2017-04-28 17:34:03,535 p=3181 u=ubuntu |  /usr/bin/ansible-playbook ansible-playbook.yml
+2017-04-28 17:34:03,535 p=3181 u=ubuntu |   
+2017-04-28 17:34:03,542 p=3181 u=ubuntu |  ERROR: the 'action' and 'local_action' attributes can not be used together
+2017-04-28 17:34:45,699 p=3194 u=ubuntu |   
+2017-04-28 17:34:45,699 p=3194 u=ubuntu |  /usr/bin/ansible-playbook ansible-playbook.yml
+2017-04-28 17:34:45,699 p=3194 u=ubuntu |   
+2017-04-28 17:34:45,707 p=3194 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 17:34:45,707 p=3194 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 17:34:46,267 p=3194 u=ubuntu |  ok: [localhost]
+2017-04-28 17:34:46,267 p=3194 u=ubuntu |  TASK: [test-role | Coy file] ************************************************** 
+2017-04-28 17:34:46,273 p=3194 u=ubuntu |  fatal: [localhost] => input file not found at /home/ubuntu/roles/test-role/files/defaultPath or /home/ubuntu/playbooks/defaultPath
+2017-04-28 17:34:46,273 p=3194 u=ubuntu |  FATAL: all hosts have already failed -- aborting
+2017-04-28 17:34:46,273 p=3194 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 17:34:46,274 p=3194 u=ubuntu |             to retry, use: --limit @/home/ubuntu/ansible-playbook.retry
+
+2017-04-28 17:34:46,274 p=3194 u=ubuntu |  localhost                  : ok=1    changed=0    unreachable=1    failed=0   
+2017-04-28 17:38:26,197 p=3228 u=ubuntu |   
+2017-04-28 17:38:26,197 p=3228 u=ubuntu |  /usr/bin/ansible-playbook ansible-playbook.yml
+2017-04-28 17:38:26,197 p=3228 u=ubuntu |   
+2017-04-28 17:38:26,203 p=3228 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 17:38:26,203 p=3228 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 17:38:26,881 p=3228 u=ubuntu |  ok: [localhost]
+2017-04-28 17:38:26,881 p=3228 u=ubuntu |  TASK: [test-role | Coy file] ************************************************** 
+2017-04-28 17:38:26,887 p=3228 u=ubuntu |  fatal: [localhost] => input file not found at /home/ubuntu/sam.py or /home/ubuntu/sam.py
+2017-04-28 17:38:26,888 p=3228 u=ubuntu |  FATAL: all hosts have already failed -- aborting
+2017-04-28 17:38:26,888 p=3228 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 17:38:26,889 p=3228 u=ubuntu |             to retry, use: --limit @/home/ubuntu/ansible-playbook.retry
+
+2017-04-28 17:38:26,889 p=3228 u=ubuntu |  localhost                  : ok=1    changed=0    unreachable=1    failed=0   
+2017-04-28 17:39:29,057 p=3266 u=ubuntu |   
+2017-04-28 17:39:29,057 p=3266 u=ubuntu |  /usr/bin/ansible-playbook ansible-playbook.yml
+2017-04-28 17:39:29,058 p=3266 u=ubuntu |   
+2017-04-28 17:39:29,065 p=3266 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 17:39:29,066 p=3266 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 17:39:29,623 p=3266 u=ubuntu |  ok: [localhost]
+2017-04-28 17:39:29,624 p=3266 u=ubuntu |  TASK: [test-role | Coy file] ************************************************** 
+2017-04-28 17:39:29,677 p=3266 u=ubuntu |  changed: [localhost]
+2017-04-28 17:39:29,678 p=3266 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 17:39:29,678 p=3266 u=ubuntu |  localhost                  : ok=2    changed=1    unreachable=0    failed=0   
+2017-04-28 17:40:47,475 p=3343 u=ubuntu |   
+2017-04-28 17:40:47,475 p=3343 u=ubuntu |  /usr/bin/ansible-playbook ansible-playbook.yml -vvv
+2017-04-28 17:40:47,476 p=3343 u=ubuntu |   
+2017-04-28 17:40:47,482 p=3343 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 17:40:47,482 p=3343 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 17:40:47,494 p=3343 u=ubuntu |  <localhost> REMOTE_MODULE setup
+2017-04-28 17:40:47,501 p=3343 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493401247.5-49622417285167 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493401247.5-49622417285167 && echo $HOME/.ansible/tmp/ansible-tmp-1493401247.5-49622417285167']
+2017-04-28 17:40:47,506 p=3343 u=ubuntu |  <localhost> PUT /tmp/tmpxwcMvn TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493401247.5-49622417285167/setup
+2017-04-28 17:40:47,507 p=3343 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493401247.5-49622417285167/setup; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493401247.5-49622417285167/ >/dev/null 2>&1']
+2017-04-28 17:40:48,191 p=3343 u=ubuntu |  ok: [localhost]
+2017-04-28 17:40:48,191 p=3343 u=ubuntu |  TASK: [test-role | Coy file] ************************************************** 
+2017-04-28 17:40:48,197 p=3343 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', u'rc=0; [ -r "/home/ubuntu/ansibleFiles/sam.py" ] || rc=2; [ -f "/home/ubuntu/ansibleFiles/sam.py" ] || rc=1; [ -d "/home/ubuntu/ansibleFiles/sam.py" ] && echo 3 && exit 0; (/usr/bin/md5sum /home/ubuntu/ansibleFiles/sam.py 2>/dev/null) || (/sbin/md5sum -q /home/ubuntu/ansibleFiles/sam.py 2>/dev/null) || (/usr/bin/digest -a md5 /home/ubuntu/ansibleFiles/sam.py 2>/dev/null) || (/sbin/md5 -q /home/ubuntu/ansibleFiles/sam.py 2>/dev/null) || (/usr/bin/md5 -n /home/ubuntu/ansibleFiles/sam.py 2>/dev/null) || (/bin/md5 -q /home/ubuntu/ansibleFiles/sam.py 2>/dev/null) || (/usr/bin/csum -h MD5 /home/ubuntu/ansibleFiles/sam.py 2>/dev/null) || (/bin/csum -h MD5 /home/ubuntu/ansibleFiles/sam.py 2>/dev/null) || (echo "${rc} /home/ubuntu/ansibleFiles/sam.py")']
+2017-04-28 17:40:48,201 p=3343 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493401248.2-143059548949796 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493401248.2-143059548949796 && echo $HOME/.ansible/tmp/ansible-tmp-1493401248.2-143059548949796']
+2017-04-28 17:40:48,205 p=3343 u=ubuntu |  <localhost> PUT /tmp/tmpoX3sPk TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493401248.2-143059548949796/file
+2017-04-28 17:40:48,205 p=3343 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493401248.2-143059548949796/file; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493401248.2-143059548949796/ >/dev/null 2>&1']
+2017-04-28 17:40:48,241 p=3343 u=ubuntu |  ok: [localhost] => {"changed": false, "dest": "/home/ubuntu/ansibleFiles/sam.py", "gid": 1000, "group": "ubuntu", "item": "", "md5sum": "e59ff97941044f85df5297e1c302d260", "mode": "0664", "owner": "ubuntu", "path": "/home/ubuntu/ansibleFiles/sam.py", "size": 12, "state": "file", "uid": 1000}
+2017-04-28 17:40:48,241 p=3343 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 17:40:48,241 p=3343 u=ubuntu |  localhost                  : ok=2    changed=0    unreachable=0    failed=0   
+2017-04-28 17:44:11,823 p=3461 u=ubuntu |   
+2017-04-28 17:44:11,823 p=3461 u=ubuntu |  /usr/bin/ansible-playbook ansible-playbook.yml
+2017-04-28 17:44:11,823 p=3461 u=ubuntu |   
+2017-04-28 17:44:11,829 p=3461 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 17:44:11,830 p=3461 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 17:44:12,285 p=3461 u=ubuntu |  ok: [localhost]
+2017-04-28 17:44:12,286 p=3461 u=ubuntu |  TASK: [test-role | Coy file] ************************************************** 
+2017-04-28 17:44:12,362 p=3461 u=ubuntu |  changed: [localhost]
+2017-04-28 17:44:12,363 p=3461 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 17:44:12,363 p=3461 u=ubuntu |  localhost                  : ok=2    changed=1    unreachable=0    failed=0   
+2017-04-28 17:45:22,263 p=3530 u=ubuntu |   
+2017-04-28 17:45:22,263 p=3530 u=ubuntu |  /usr/bin/ansible-playbook ansible-playbook.yml
+2017-04-28 17:45:22,263 p=3530 u=ubuntu |   
+2017-04-28 17:45:22,271 p=3530 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 17:45:22,271 p=3530 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 17:45:22,816 p=3530 u=ubuntu |  ok: [localhost]
+2017-04-28 17:45:22,817 p=3530 u=ubuntu |  TASK: [test-role | Coy file] ************************************************** 
+2017-04-28 17:45:22,881 p=3530 u=ubuntu |  ok: [localhost]
+2017-04-28 17:45:22,881 p=3530 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 17:45:22,881 p=3530 u=ubuntu |  localhost                  : ok=2    changed=0    unreachable=0    failed=0   
+2017-04-28 17:45:59,517 p=3581 u=ubuntu |   
+2017-04-28 17:45:59,518 p=3581 u=ubuntu |  /usr/bin/ansible-playbook ansible-playbook.yml
+2017-04-28 17:45:59,518 p=3581 u=ubuntu |   
+2017-04-28 17:45:59,527 p=3581 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 17:45:59,528 p=3581 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 17:46:00,011 p=3581 u=ubuntu |  ok: [localhost]
+2017-04-28 17:46:00,012 p=3581 u=ubuntu |  TASK: [test-role | Coy file] ************************************************** 
+2017-04-28 17:46:00,063 p=3581 u=ubuntu |  changed: [localhost]
+2017-04-28 17:46:00,063 p=3581 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 17:46:00,063 p=3581 u=ubuntu |  localhost                  : ok=2    changed=1    unreachable=0    failed=0   
+2017-04-28 17:47:33,391 p=3702 u=ubuntu |   
+2017-04-28 17:47:33,391 p=3702 u=ubuntu |  /usr/bin/ansible-playbook playbook.yml
+2017-04-28 17:47:33,391 p=3702 u=ubuntu |   
+2017-04-28 17:47:33,397 p=3702 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 17:47:33,397 p=3702 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 17:47:33,898 p=3702 u=ubuntu |  ok: [localhost]
+2017-04-28 17:47:33,898 p=3702 u=ubuntu |  TASK: [test-role | Coy file] ************************************************** 
+2017-04-28 17:47:33,962 p=3702 u=ubuntu |  changed: [localhost]
+2017-04-28 17:47:33,962 p=3702 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 17:47:33,962 p=3702 u=ubuntu |  localhost                  : ok=2    changed=1    unreachable=0    failed=0   
+2017-04-28 17:51:16,904 p=3801 u=ubuntu |   
+2017-04-28 17:51:16,904 p=3801 u=ubuntu |  /usr/bin/ansible-playbook playbook.yml
+2017-04-28 17:51:16,904 p=3801 u=ubuntu |   
+2017-04-28 17:51:16,916 p=3801 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 17:51:16,917 p=3801 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 17:51:17,470 p=3801 u=ubuntu |  ok: [localhost]
+2017-04-28 17:51:17,471 p=3801 u=ubuntu |  TASK: [test-role | Coy file] ************************************************** 
+2017-04-28 17:51:17,535 p=3801 u=ubuntu |  ok: [localhost]
+2017-04-28 17:51:17,536 p=3801 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 17:51:17,536 p=3801 u=ubuntu |  localhost                  : ok=2    changed=0    unreachable=0    failed=0   
+2017-04-28 17:51:27,664 p=3839 u=ubuntu |   
+2017-04-28 17:51:27,664 p=3839 u=ubuntu |  /usr/bin/ansible-playbook playbook.yml -vvv
+2017-04-28 17:51:27,664 p=3839 u=ubuntu |   
+2017-04-28 17:51:27,672 p=3839 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 17:51:27,672 p=3839 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 17:51:27,682 p=3839 u=ubuntu |  <localhost> REMOTE_MODULE setup
+2017-04-28 17:51:27,688 p=3839 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493401887.69-254767870570459 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493401887.69-254767870570459 && echo $HOME/.ansible/tmp/ansible-tmp-1493401887.69-254767870570459']
+2017-04-28 17:51:27,697 p=3839 u=ubuntu |  <localhost> PUT /tmp/tmp9HajSf TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493401887.69-254767870570459/setup
+2017-04-28 17:51:27,698 p=3839 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493401887.69-254767870570459/setup; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493401887.69-254767870570459/ >/dev/null 2>&1']
+2017-04-28 17:51:28,132 p=3839 u=ubuntu |  ok: [localhost]
+2017-04-28 17:51:28,133 p=3839 u=ubuntu |  TASK: [test-role | Coy file] ************************************************** 
+2017-04-28 17:51:28,154 p=3839 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', u'rc=0; [ -r "/home/ubuntu/files/sam.py" ] || rc=2; [ -f "/home/ubuntu/files/sam.py" ] || rc=1; [ -d "/home/ubuntu/files/sam.py" ] && echo 3 && exit 0; (/usr/bin/md5sum /home/ubuntu/files/sam.py 2>/dev/null) || (/sbin/md5sum -q /home/ubuntu/files/sam.py 2>/dev/null) || (/usr/bin/digest -a md5 /home/ubuntu/files/sam.py 2>/dev/null) || (/sbin/md5 -q /home/ubuntu/files/sam.py 2>/dev/null) || (/usr/bin/md5 -n /home/ubuntu/files/sam.py 2>/dev/null) || (/bin/md5 -q /home/ubuntu/files/sam.py 2>/dev/null) || (/usr/bin/csum -h MD5 /home/ubuntu/files/sam.py 2>/dev/null) || (/bin/csum -h MD5 /home/ubuntu/files/sam.py 2>/dev/null) || (echo "${rc} /home/ubuntu/files/sam.py")']
+2017-04-28 17:51:28,159 p=3839 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493401888.16-131209937901315 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493401888.16-131209937901315 && echo $HOME/.ansible/tmp/ansible-tmp-1493401888.16-131209937901315']
+2017-04-28 17:51:28,163 p=3839 u=ubuntu |  <localhost> PUT /tmp/tmpuEKmX2 TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493401888.16-131209937901315/file
+2017-04-28 17:51:28,164 p=3839 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493401888.16-131209937901315/file; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493401888.16-131209937901315/ >/dev/null 2>&1']
+2017-04-28 17:51:28,202 p=3839 u=ubuntu |  ok: [localhost] => {"changed": false, "dest": "/home/ubuntu/files/sam.py", "gid": 1000, "group": "ubuntu", "item": "", "md5sum": "07c0431842313cc81b68b1c0ba3ab467", "mode": "0664", "owner": "ubuntu", "path": "/home/ubuntu/files/sam.py", "size": 12, "state": "file", "uid": 1000}
+2017-04-28 17:51:28,202 p=3839 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 17:51:28,203 p=3839 u=ubuntu |  localhost                  : ok=2    changed=0    unreachable=0    failed=0   
+2017-04-28 17:51:54,106 p=3879 u=ubuntu |   
+2017-04-28 17:51:54,107 p=3879 u=ubuntu |  /usr/bin/ansible-playbook playbook.yml -vvv
+2017-04-28 17:51:54,107 p=3879 u=ubuntu |   
+2017-04-28 17:51:54,116 p=3879 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 17:51:54,117 p=3879 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 17:51:54,126 p=3879 u=ubuntu |  <localhost> REMOTE_MODULE setup
+2017-04-28 17:51:54,131 p=3879 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493401914.13-150600705657250 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493401914.13-150600705657250 && echo $HOME/.ansible/tmp/ansible-tmp-1493401914.13-150600705657250']
+2017-04-28 17:51:54,136 p=3879 u=ubuntu |  <localhost> PUT /tmp/tmprc3VjX TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493401914.13-150600705657250/setup
+2017-04-28 17:51:54,136 p=3879 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493401914.13-150600705657250/setup; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493401914.13-150600705657250/ >/dev/null 2>&1']
+2017-04-28 17:51:54,545 p=3879 u=ubuntu |  ok: [localhost]
+2017-04-28 17:51:54,545 p=3879 u=ubuntu |  TASK: [test-role | Coy file] ************************************************** 
+2017-04-28 17:51:54,552 p=3879 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', u'rc=0; [ -r "/home/ubuntu/files/sam.py" ] || rc=2; [ -f "/home/ubuntu/files/sam.py" ] || rc=1; [ -d "/home/ubuntu/files/sam.py" ] && echo 3 && exit 0; (/usr/bin/md5sum /home/ubuntu/files/sam.py 2>/dev/null) || (/sbin/md5sum -q /home/ubuntu/files/sam.py 2>/dev/null) || (/usr/bin/digest -a md5 /home/ubuntu/files/sam.py 2>/dev/null) || (/sbin/md5 -q /home/ubuntu/files/sam.py 2>/dev/null) || (/usr/bin/md5 -n /home/ubuntu/files/sam.py 2>/dev/null) || (/bin/md5 -q /home/ubuntu/files/sam.py 2>/dev/null) || (/usr/bin/csum -h MD5 /home/ubuntu/files/sam.py 2>/dev/null) || (/bin/csum -h MD5 /home/ubuntu/files/sam.py 2>/dev/null) || (echo "${rc} /home/ubuntu/files/sam.py")']
+2017-04-28 17:51:54,555 p=3879 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493401914.56-220703751985889 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493401914.56-220703751985889 && echo $HOME/.ansible/tmp/ansible-tmp-1493401914.56-220703751985889']
+2017-04-28 17:51:54,559 p=3879 u=ubuntu |  <localhost> PUT /home/ubuntu/sam.py TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493401914.56-220703751985889/source
+2017-04-28 17:51:54,560 p=3879 u=ubuntu |  <localhost> PUT /tmp/tmpPD6elQ TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493401914.56-220703751985889/copy
+2017-04-28 17:51:54,561 p=3879 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493401914.56-220703751985889/copy; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493401914.56-220703751985889/ >/dev/null 2>&1']
+2017-04-28 17:51:54,609 p=3879 u=ubuntu |  changed: [localhost] => {"changed": true, "dest": "/home/ubuntu/files/sam.py", "gid": 1000, "group": "ubuntu", "item": "", "md5sum": "508bd3e0bb1fa52753de3d357fb56fce", "mode": "0664", "owner": "ubuntu", "size": 30, "src": "/home/ubuntu/.ansible/tmp/ansible-tmp-1493401914.56-220703751985889/source", "state": "file", "uid": 1000}
+2017-04-28 17:51:54,609 p=3879 u=ubuntu |  ERROR: change handler (sample-handler) is not defined
+2017-04-28 17:52:54,719 p=3946 u=ubuntu |   
+2017-04-28 17:52:54,719 p=3946 u=ubuntu |  /usr/bin/ansible-playbook playbook.yml -vvv
+2017-04-28 17:52:54,719 p=3946 u=ubuntu |   
+2017-04-28 17:52:54,727 p=3946 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 17:52:54,728 p=3946 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 17:52:54,742 p=3946 u=ubuntu |  <localhost> REMOTE_MODULE setup
+2017-04-28 17:52:54,749 p=3946 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493401974.75-108628469609258 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493401974.75-108628469609258 && echo $HOME/.ansible/tmp/ansible-tmp-1493401974.75-108628469609258']
+2017-04-28 17:52:54,755 p=3946 u=ubuntu |  <localhost> PUT /tmp/tmp7yVwkv TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493401974.75-108628469609258/setup
+2017-04-28 17:52:54,756 p=3946 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493401974.75-108628469609258/setup; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493401974.75-108628469609258/ >/dev/null 2>&1']
+2017-04-28 17:52:55,224 p=3946 u=ubuntu |  ok: [localhost]
+2017-04-28 17:52:55,224 p=3946 u=ubuntu |  TASK: [test-role | Coy file] ************************************************** 
+2017-04-28 17:52:55,232 p=3946 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', u'rc=0; [ -r "/home/ubuntu/files/sam.py" ] || rc=2; [ -f "/home/ubuntu/files/sam.py" ] || rc=1; [ -d "/home/ubuntu/files/sam.py" ] && echo 3 && exit 0; (/usr/bin/md5sum /home/ubuntu/files/sam.py 2>/dev/null) || (/sbin/md5sum -q /home/ubuntu/files/sam.py 2>/dev/null) || (/usr/bin/digest -a md5 /home/ubuntu/files/sam.py 2>/dev/null) || (/sbin/md5 -q /home/ubuntu/files/sam.py 2>/dev/null) || (/usr/bin/md5 -n /home/ubuntu/files/sam.py 2>/dev/null) || (/bin/md5 -q /home/ubuntu/files/sam.py 2>/dev/null) || (/usr/bin/csum -h MD5 /home/ubuntu/files/sam.py 2>/dev/null) || (/bin/csum -h MD5 /home/ubuntu/files/sam.py 2>/dev/null) || (echo "${rc} /home/ubuntu/files/sam.py")']
+2017-04-28 17:52:55,236 p=3946 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493401975.24-253620454248414 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493401975.24-253620454248414 && echo $HOME/.ansible/tmp/ansible-tmp-1493401975.24-253620454248414']
+2017-04-28 17:52:55,257 p=3946 u=ubuntu |  <localhost> PUT /tmp/tmpcyanFb TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493401975.24-253620454248414/file
+2017-04-28 17:52:55,257 p=3946 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493401975.24-253620454248414/file; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493401975.24-253620454248414/ >/dev/null 2>&1']
+2017-04-28 17:52:55,293 p=3946 u=ubuntu |  ok: [localhost] => {"changed": false, "dest": "/home/ubuntu/files/sam.py", "gid": 1000, "group": "ubuntu", "item": "", "md5sum": "508bd3e0bb1fa52753de3d357fb56fce", "mode": "0664", "owner": "ubuntu", "path": "/home/ubuntu/files/sam.py", "size": 30, "state": "file", "uid": 1000}
+2017-04-28 17:52:55,294 p=3946 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 17:52:55,294 p=3946 u=ubuntu |  localhost                  : ok=2    changed=0    unreachable=0    failed=0   
+2017-04-28 17:53:58,814 p=4015 u=ubuntu |   
+2017-04-28 17:53:58,814 p=4015 u=ubuntu |  /usr/bin/ansible-playbook playbook.yml -vvv
+2017-04-28 17:53:58,814 p=4015 u=ubuntu |   
+2017-04-28 17:53:58,822 p=4015 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 17:53:58,822 p=4015 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 17:53:58,832 p=4015 u=ubuntu |  <localhost> REMOTE_MODULE setup
+2017-04-28 17:53:58,836 p=4015 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493402038.84-170958705265205 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493402038.84-170958705265205 && echo $HOME/.ansible/tmp/ansible-tmp-1493402038.84-170958705265205']
+2017-04-28 17:53:58,841 p=4015 u=ubuntu |  <localhost> PUT /tmp/tmpCfz7QD TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493402038.84-170958705265205/setup
+2017-04-28 17:53:58,842 p=4015 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493402038.84-170958705265205/setup; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493402038.84-170958705265205/ >/dev/null 2>&1']
+2017-04-28 17:53:59,256 p=4015 u=ubuntu |  ok: [localhost]
+2017-04-28 17:53:59,257 p=4015 u=ubuntu |  TASK: [test-role | Coy file] ************************************************** 
+2017-04-28 17:53:59,262 p=4015 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', u'rc=0; [ -r "/home/ubuntu/files/sam.py" ] || rc=2; [ -f "/home/ubuntu/files/sam.py" ] || rc=1; [ -d "/home/ubuntu/files/sam.py" ] && echo 3 && exit 0; (/usr/bin/md5sum /home/ubuntu/files/sam.py 2>/dev/null) || (/sbin/md5sum -q /home/ubuntu/files/sam.py 2>/dev/null) || (/usr/bin/digest -a md5 /home/ubuntu/files/sam.py 2>/dev/null) || (/sbin/md5 -q /home/ubuntu/files/sam.py 2>/dev/null) || (/usr/bin/md5 -n /home/ubuntu/files/sam.py 2>/dev/null) || (/bin/md5 -q /home/ubuntu/files/sam.py 2>/dev/null) || (/usr/bin/csum -h MD5 /home/ubuntu/files/sam.py 2>/dev/null) || (/bin/csum -h MD5 /home/ubuntu/files/sam.py 2>/dev/null) || (echo "${rc} /home/ubuntu/files/sam.py")']
+2017-04-28 17:53:59,266 p=4015 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493402039.27-176635174356673 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493402039.27-176635174356673 && echo $HOME/.ansible/tmp/ansible-tmp-1493402039.27-176635174356673']
+2017-04-28 17:53:59,269 p=4015 u=ubuntu |  <localhost> PUT /tmp/tmprGUlCx TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493402039.27-176635174356673/file
+2017-04-28 17:53:59,270 p=4015 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493402039.27-176635174356673/file; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493402039.27-176635174356673/ >/dev/null 2>&1']
+2017-04-28 17:53:59,309 p=4015 u=ubuntu |  ok: [localhost] => {"changed": false, "dest": "/home/ubuntu/files/sam.py", "gid": 1000, "group": "ubuntu", "item": "", "md5sum": "508bd3e0bb1fa52753de3d357fb56fce", "mode": "0664", "owner": "ubuntu", "path": "/home/ubuntu/files/sam.py", "size": 30, "state": "file", "uid": 1000}
+2017-04-28 17:53:59,309 p=4015 u=ubuntu |  TASK: [test-role | debug var=FileItem verbosity=True] ************************* 
+2017-04-28 17:53:59,316 p=4015 u=ubuntu |  ok: [localhost] => {
+    "FileItem": {
+        "changed": false, 
+        "dest": "/home/ubuntu/files/sam.py", 
+        "gid": 1000, 
+        "group": "ubuntu", 
+        "invocation": {
+            "module_args": "src=/home/ubuntu/sam.py dest=/home/ubuntu/files/", 
+            "module_name": "copy"
+        }, 
+        "item": "", 
+        "md5sum": "508bd3e0bb1fa52753de3d357fb56fce", 
+        "mode": "0664", 
+        "owner": "ubuntu", 
+        "path": "/home/ubuntu/files/sam.py", 
+        "size": 30, 
+        "state": "file", 
+        "uid": 1000
+    }, 
+    "item": ""
+}
+2017-04-28 17:53:59,316 p=4015 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 17:53:59,316 p=4015 u=ubuntu |  localhost                  : ok=3    changed=0    unreachable=0    failed=0   
+2017-04-28 17:58:28,828 p=4073 u=ubuntu |   
+2017-04-28 17:58:28,828 p=4073 u=ubuntu |  /usr/bin/ansible-playbook playbook.yml -vvv
+2017-04-28 17:58:28,828 p=4073 u=ubuntu |   
+2017-04-28 17:58:28,837 p=4073 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 17:58:28,838 p=4073 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 17:58:28,846 p=4073 u=ubuntu |  <localhost> REMOTE_MODULE setup
+2017-04-28 17:58:28,851 p=4073 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493402308.85-114209659802899 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493402308.85-114209659802899 && echo $HOME/.ansible/tmp/ansible-tmp-1493402308.85-114209659802899']
+2017-04-28 17:58:28,857 p=4073 u=ubuntu |  <localhost> PUT /tmp/tmpbepI32 TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493402308.85-114209659802899/setup
+2017-04-28 17:58:28,857 p=4073 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493402308.85-114209659802899/setup; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493402308.85-114209659802899/ >/dev/null 2>&1']
+2017-04-28 17:58:29,426 p=4073 u=ubuntu |  ok: [localhost]
+2017-04-28 17:58:29,430 p=4073 u=ubuntu |  TASK: [test-role | Coy file] ************************************************** 
+2017-04-28 17:58:29,440 p=4073 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', u'rc=0; [ -r "/home/ubuntu/files/sam.py" ] || rc=2; [ -f "/home/ubuntu/files/sam.py" ] || rc=1; [ -d "/home/ubuntu/files/sam.py" ] && echo 3 && exit 0; (/usr/bin/md5sum /home/ubuntu/files/sam.py 2>/dev/null) || (/sbin/md5sum -q /home/ubuntu/files/sam.py 2>/dev/null) || (/usr/bin/digest -a md5 /home/ubuntu/files/sam.py 2>/dev/null) || (/sbin/md5 -q /home/ubuntu/files/sam.py 2>/dev/null) || (/usr/bin/md5 -n /home/ubuntu/files/sam.py 2>/dev/null) || (/bin/md5 -q /home/ubuntu/files/sam.py 2>/dev/null) || (/usr/bin/csum -h MD5 /home/ubuntu/files/sam.py 2>/dev/null) || (/bin/csum -h MD5 /home/ubuntu/files/sam.py 2>/dev/null) || (echo "${rc} /home/ubuntu/files/sam.py")']
+2017-04-28 17:58:29,445 p=4073 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493402309.45-146552212245992 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493402309.45-146552212245992 && echo $HOME/.ansible/tmp/ansible-tmp-1493402309.45-146552212245992']
+2017-04-28 17:58:29,449 p=4073 u=ubuntu |  <localhost> PUT /tmp/tmpyvjWh1 TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493402309.45-146552212245992/file
+2017-04-28 17:58:29,449 p=4073 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493402309.45-146552212245992/file; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493402309.45-146552212245992/ >/dev/null 2>&1']
+2017-04-28 17:58:29,486 p=4073 u=ubuntu |  ok: [localhost] => {"changed": false, "dest": "/home/ubuntu/files/sam.py", "gid": 1000, "group": "ubuntu", "item": "", "md5sum": "508bd3e0bb1fa52753de3d357fb56fce", "mode": "0664", "owner": "ubuntu", "path": "/home/ubuntu/files/sam.py", "size": 30, "state": "file", "uid": 1000}
+2017-04-28 17:58:29,487 p=4073 u=ubuntu |  TASK: [test-role | debug var=FileItem verbosity=True] ************************* 
+2017-04-28 17:58:29,492 p=4073 u=ubuntu |  ok: [localhost] => {
+    "FileItem": {
+        "changed": false, 
+        "dest": "/home/ubuntu/files/sam.py", 
+        "gid": 1000, 
+        "group": "ubuntu", 
+        "invocation": {
+            "module_args": "src=/home/ubuntu/sam.py dest=/home/ubuntu/files/", 
+            "module_name": "copy"
+        }, 
+        "item": "", 
+        "md5sum": "508bd3e0bb1fa52753de3d357fb56fce", 
+        "mode": "0664", 
+        "owner": "ubuntu", 
+        "path": "/home/ubuntu/files/sam.py", 
+        "size": 30, 
+        "state": "file", 
+        "uid": 1000
+    }, 
+    "item": ""
+}
+2017-04-28 17:58:29,493 p=4073 u=ubuntu |  TASK: [test-role | debug var=show_msg verbosity=True] ************************* 
+2017-04-28 17:58:29,497 p=4073 u=ubuntu |  ok: [localhost] => {
+    "item": "", 
+    "show_msg": "{{ show_msg }}"
+}
+2017-04-28 17:58:29,497 p=4073 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 17:58:29,498 p=4073 u=ubuntu |  localhost                  : ok=4    changed=0    unreachable=0    failed=0   
+2017-04-28 18:57:14,971 p=4118 u=ubuntu |   
+2017-04-28 18:57:14,972 p=4118 u=ubuntu |  /usr/bin/ansible-playbook playbook.yml -vvv
+2017-04-28 18:57:14,972 p=4118 u=ubuntu |   
+2017-04-28 18:57:14,980 p=4118 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 18:57:14,980 p=4118 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 18:57:14,989 p=4118 u=ubuntu |  <localhost> REMOTE_MODULE setup
+2017-04-28 18:57:14,993 p=4118 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493405834.99-228337735146918 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493405834.99-228337735146918 && echo $HOME/.ansible/tmp/ansible-tmp-1493405834.99-228337735146918']
+2017-04-28 18:57:14,998 p=4118 u=ubuntu |  <localhost> PUT /tmp/tmp7K7RA_ TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493405834.99-228337735146918/setup
+2017-04-28 18:57:14,999 p=4118 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493405834.99-228337735146918/setup; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493405834.99-228337735146918/ >/dev/null 2>&1']
+2017-04-28 18:57:15,740 p=4118 u=ubuntu |  ok: [localhost]
+2017-04-28 18:57:15,741 p=4118 u=ubuntu |  TASK: [test-role | Coy file] ************************************************** 
+2017-04-28 18:57:15,747 p=4118 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', u'rc=0; [ -r "/home/ubuntu/files/sam.py" ] || rc=2; [ -f "/home/ubuntu/files/sam.py" ] || rc=1; [ -d "/home/ubuntu/files/sam.py" ] && echo 3 && exit 0; (/usr/bin/md5sum /home/ubuntu/files/sam.py 2>/dev/null) || (/sbin/md5sum -q /home/ubuntu/files/sam.py 2>/dev/null) || (/usr/bin/digest -a md5 /home/ubuntu/files/sam.py 2>/dev/null) || (/sbin/md5 -q /home/ubuntu/files/sam.py 2>/dev/null) || (/usr/bin/md5 -n /home/ubuntu/files/sam.py 2>/dev/null) || (/bin/md5 -q /home/ubuntu/files/sam.py 2>/dev/null) || (/usr/bin/csum -h MD5 /home/ubuntu/files/sam.py 2>/dev/null) || (/bin/csum -h MD5 /home/ubuntu/files/sam.py 2>/dev/null) || (echo "${rc} /home/ubuntu/files/sam.py")']
+2017-04-28 18:57:15,750 p=4118 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493405835.75-92416417363780 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493405835.75-92416417363780 && echo $HOME/.ansible/tmp/ansible-tmp-1493405835.75-92416417363780']
+2017-04-28 18:57:15,754 p=4118 u=ubuntu |  <localhost> PUT /home/ubuntu/sam.py TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493405835.75-92416417363780/source
+2017-04-28 18:57:15,756 p=4118 u=ubuntu |  <localhost> PUT /tmp/tmptbYmF8 TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493405835.75-92416417363780/copy
+2017-04-28 18:57:15,756 p=4118 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493405835.75-92416417363780/copy; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493405835.75-92416417363780/ >/dev/null 2>&1']
+2017-04-28 18:57:15,802 p=4118 u=ubuntu |  changed: [localhost] => {"changed": true, "dest": "/home/ubuntu/files/sam.py", "gid": 1000, "group": "ubuntu", "item": "", "md5sum": "471e997ce8c23ad558c2935b88814ab3", "mode": "0664", "owner": "ubuntu", "size": 4, "src": "/home/ubuntu/.ansible/tmp/ansible-tmp-1493405835.75-92416417363780/source", "state": "file", "uid": 1000}
+2017-04-28 18:57:15,802 p=4118 u=ubuntu |  TASK: [test-role | debug var=FileItem verbosity=True] ************************* 
+2017-04-28 18:57:15,809 p=4118 u=ubuntu |  ok: [localhost] => {
+    "FileItem": {
+        "changed": true, 
+        "dest": "/home/ubuntu/files/sam.py", 
+        "gid": 1000, 
+        "group": "ubuntu", 
+        "invocation": {
+            "module_args": "src=/home/ubuntu/sam.py dest=/home/ubuntu/files/", 
+            "module_name": "copy"
+        }, 
+        "item": "", 
+        "md5sum": "471e997ce8c23ad558c2935b88814ab3", 
+        "mode": "0664", 
+        "owner": "ubuntu", 
+        "size": 4, 
+        "src": "/home/ubuntu/.ansible/tmp/ansible-tmp-1493405835.75-92416417363780/source", 
+        "state": "file", 
+        "uid": 1000
+    }, 
+    "item": ""
+}
+2017-04-28 18:57:15,810 p=4118 u=ubuntu |  TASK: [test-role | debug var=show_msg verbosity=True] ************************* 
+2017-04-28 18:57:15,815 p=4118 u=ubuntu |  ok: [localhost] => {
+    "item": "", 
+    "show_msg": "{{ show_msg }}"
+}
+2017-04-28 18:57:15,815 p=4118 u=ubuntu |  NOTIFIED: [test-role | sample-handler] **************************************** 
+2017-04-28 18:57:15,820 p=4118 u=ubuntu |  ok: [localhost] => {"ansible_facts": {"show_msg": true}, "item": ""}
+2017-04-28 18:57:15,820 p=4118 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 18:57:15,820 p=4118 u=ubuntu |  localhost                  : ok=5    changed=1    unreachable=0    failed=0   
+2017-04-28 19:07:21,927 p=4242 u=ubuntu |   
+2017-04-28 19:07:21,928 p=4242 u=ubuntu |  /usr/bin/ansible-playbook playbook.yml -vvv
+2017-04-28 19:07:21,928 p=4242 u=ubuntu |   
+2017-04-28 19:07:21,936 p=4242 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 19:07:21,936 p=4242 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 19:07:21,946 p=4242 u=ubuntu |  <localhost> REMOTE_MODULE setup
+2017-04-28 19:07:21,950 p=4242 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493406441.95-149057340628372 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493406441.95-149057340628372 && echo $HOME/.ansible/tmp/ansible-tmp-1493406441.95-149057340628372']
+2017-04-28 19:07:21,955 p=4242 u=ubuntu |  <localhost> PUT /tmp/tmpDi8Q4A TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493406441.95-149057340628372/setup
+2017-04-28 19:07:21,956 p=4242 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493406441.95-149057340628372/setup; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493406441.95-149057340628372/ >/dev/null 2>&1']
+2017-04-28 19:07:22,537 p=4242 u=ubuntu |  ok: [localhost]
+2017-04-28 19:07:22,537 p=4242 u=ubuntu |  TASK: [test-role | Coy file] ************************************************** 
+2017-04-28 19:07:22,546 p=4242 u=ubuntu |  fatal: [localhost] => error while evaluating conditional: defaultPath.stat.exists == True
+2017-04-28 19:07:22,546 p=4242 u=ubuntu |  FATAL: all hosts have already failed -- aborting
+2017-04-28 19:07:22,546 p=4242 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 19:07:22,547 p=4242 u=ubuntu |             to retry, use: --limit @/home/ubuntu/playbook.retry
+
+2017-04-28 19:07:22,547 p=4242 u=ubuntu |  localhost                  : ok=1    changed=0    unreachable=1    failed=0   
+2017-04-28 19:08:10,849 p=4273 u=ubuntu |   
+2017-04-28 19:08:10,850 p=4273 u=ubuntu |  /usr/bin/ansible-playbook playbook.yml -vvv
+2017-04-28 19:08:10,850 p=4273 u=ubuntu |   
+2017-04-28 19:08:10,857 p=4273 u=ubuntu |  ERROR: Syntax Error while loading YAML script, /home/ubuntu/roles/test-role/tasks/main.yml
+Note: The error may actually appear before this position: line 8, column 6
+
+  with_items:
+  - {{ defaultPath }}
+     ^
+We could be wrong, but this one looks like it might be an issue with
+missing quotes.  Always quote template expression brackets when they 
+start a value. For instance:            
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"      
+
+
+2017-04-28 19:08:42,848 p=4283 u=ubuntu |   
+2017-04-28 19:08:42,848 p=4283 u=ubuntu |  /usr/bin/ansible-playbook playbook.yml -vvv
+2017-04-28 19:08:42,848 p=4283 u=ubuntu |   
+2017-04-28 19:08:42,857 p=4283 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 19:08:42,857 p=4283 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 19:08:42,867 p=4283 u=ubuntu |  <localhost> REMOTE_MODULE setup
+2017-04-28 19:08:42,871 p=4283 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493406522.87-238604294642554 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493406522.87-238604294642554 && echo $HOME/.ansible/tmp/ansible-tmp-1493406522.87-238604294642554']
+2017-04-28 19:08:42,877 p=4283 u=ubuntu |  <localhost> PUT /tmp/tmpm_WTs7 TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493406522.87-238604294642554/setup
+2017-04-28 19:08:42,877 p=4283 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493406522.87-238604294642554/setup; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493406522.87-238604294642554/ >/dev/null 2>&1']
+2017-04-28 19:08:43,359 p=4283 u=ubuntu |  ok: [localhost]
+2017-04-28 19:08:43,359 p=4283 u=ubuntu |  TASK: [test-role | Coy file] ************************************************** 
+2017-04-28 19:08:43,368 p=4283 u=ubuntu |  fatal: [localhost] => error while evaluating conditional: item.stat.exists == True
+2017-04-28 19:08:43,369 p=4283 u=ubuntu |  FATAL: all hosts have already failed -- aborting
+2017-04-28 19:08:43,369 p=4283 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 19:08:43,370 p=4283 u=ubuntu |             to retry, use: --limit @/home/ubuntu/playbook.retry
+
+2017-04-28 19:08:43,370 p=4283 u=ubuntu |  localhost                  : ok=1    changed=0    unreachable=1    failed=0   
+2017-04-28 19:10:47,456 p=4315 u=ubuntu |   
+2017-04-28 19:10:47,456 p=4315 u=ubuntu |  /usr/bin/ansible-playbook playbook.yml -vvv
+2017-04-28 19:10:47,456 p=4315 u=ubuntu |   
+2017-04-28 19:10:47,468 p=4315 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 19:10:47,468 p=4315 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 19:10:47,480 p=4315 u=ubuntu |  <localhost> REMOTE_MODULE setup
+2017-04-28 19:10:47,485 p=4315 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493406647.49-239015124273089 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493406647.49-239015124273089 && echo $HOME/.ansible/tmp/ansible-tmp-1493406647.49-239015124273089']
+2017-04-28 19:10:47,503 p=4315 u=ubuntu |  <localhost> PUT /tmp/tmpWH7lRE TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493406647.49-239015124273089/setup
+2017-04-28 19:10:47,504 p=4315 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493406647.49-239015124273089/setup; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493406647.49-239015124273089/ >/dev/null 2>&1']
+2017-04-28 19:10:48,039 p=4315 u=ubuntu |  ok: [localhost]
+2017-04-28 19:10:48,039 p=4315 u=ubuntu |  TASK: [test-role | Verify local file] ***************************************** 
+2017-04-28 19:10:48,041 p=4315 u=ubuntu |  <127.0.0.1> REMOTE_MODULE stat path=/home/ubuntu/sami.py
+2017-04-28 19:10:48,042 p=4315 u=ubuntu |  <127.0.0.1> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493406648.04-96769917600632 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493406648.04-96769917600632 && echo $HOME/.ansible/tmp/ansible-tmp-1493406648.04-96769917600632']
+2017-04-28 19:10:48,045 p=4315 u=ubuntu |  <127.0.0.1> PUT /tmp/tmpjENX6f TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493406648.04-96769917600632/stat
+2017-04-28 19:10:48,046 p=4315 u=ubuntu |  <127.0.0.1> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493406648.04-96769917600632/stat; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493406648.04-96769917600632/ >/dev/null 2>&1']
+2017-04-28 19:10:48,081 p=4315 u=ubuntu |  ok: [localhost] => {"changed": false, "item": "", "stat": {"exists": false}}
+2017-04-28 19:10:48,081 p=4315 u=ubuntu |  TASK: [test-role | Copy file] ************************************************* 
+2017-04-28 19:10:48,089 p=4315 u=ubuntu |  fatal: [localhost] => error while evaluating conditional: item.stat.exists == True
+2017-04-28 19:10:48,090 p=4315 u=ubuntu |  FATAL: all hosts have already failed -- aborting
+2017-04-28 19:10:48,090 p=4315 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 19:10:48,090 p=4315 u=ubuntu |             to retry, use: --limit @/home/ubuntu/playbook.retry
+
+2017-04-28 19:10:48,096 p=4315 u=ubuntu |  localhost                  : ok=2    changed=0    unreachable=1    failed=0   
+2017-04-28 19:11:28,430 p=4353 u=ubuntu |   
+2017-04-28 19:11:28,430 p=4353 u=ubuntu |  /usr/bin/ansible-playbook playbook.yml -vvv
+2017-04-28 19:11:28,430 p=4353 u=ubuntu |   
+2017-04-28 19:11:28,441 p=4353 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 19:11:28,442 p=4353 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 19:11:28,451 p=4353 u=ubuntu |  <localhost> REMOTE_MODULE setup
+2017-04-28 19:11:28,456 p=4353 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493406688.46-280290501898891 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493406688.46-280290501898891 && echo $HOME/.ansible/tmp/ansible-tmp-1493406688.46-280290501898891']
+2017-04-28 19:11:28,460 p=4353 u=ubuntu |  <localhost> PUT /tmp/tmpRtXrQR TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493406688.46-280290501898891/setup
+2017-04-28 19:11:28,461 p=4353 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493406688.46-280290501898891/setup; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493406688.46-280290501898891/ >/dev/null 2>&1']
+2017-04-28 19:11:28,936 p=4353 u=ubuntu |  ok: [localhost]
+2017-04-28 19:11:28,937 p=4353 u=ubuntu |  TASK: [test-role | Verify local file] ***************************************** 
+2017-04-28 19:11:28,939 p=4353 u=ubuntu |  <127.0.0.1> REMOTE_MODULE stat path=/home/ubuntu/sami.py
+2017-04-28 19:11:28,940 p=4353 u=ubuntu |  <127.0.0.1> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493406688.94-104317615821547 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493406688.94-104317615821547 && echo $HOME/.ansible/tmp/ansible-tmp-1493406688.94-104317615821547']
+2017-04-28 19:11:28,945 p=4353 u=ubuntu |  <127.0.0.1> PUT /tmp/tmp1o6990 TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493406688.94-104317615821547/stat
+2017-04-28 19:11:28,945 p=4353 u=ubuntu |  <127.0.0.1> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493406688.94-104317615821547/stat; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493406688.94-104317615821547/ >/dev/null 2>&1']
+2017-04-28 19:11:28,983 p=4353 u=ubuntu |  ok: [localhost] => {"changed": false, "item": "", "stat": {"exists": false}}
+2017-04-28 19:11:28,983 p=4353 u=ubuntu |  TASK: [test-role | debug var=localFileStat verbosity=True] ******************** 
+2017-04-28 19:11:28,989 p=4353 u=ubuntu |  ok: [localhost] => {
+    "item": "", 
+    "localFileStat": {
+        "changed": false, 
+        "invocation": {
+            "module_args": "path=/home/ubuntu/sami.py", 
+            "module_name": "stat"
+        }, 
+        "item": "", 
+        "stat": {
+            "exists": false
+        }
+    }
+}
+2017-04-28 19:11:28,990 p=4353 u=ubuntu |  TASK: [test-role | Copy file] ************************************************* 
+2017-04-28 19:11:28,998 p=4353 u=ubuntu |  fatal: [localhost] => error while evaluating conditional: item.stat.exists == True
+2017-04-28 19:11:28,999 p=4353 u=ubuntu |  FATAL: all hosts have already failed -- aborting
+2017-04-28 19:11:28,999 p=4353 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 19:11:29,000 p=4353 u=ubuntu |             to retry, use: --limit @/home/ubuntu/playbook.retry
+
+2017-04-28 19:11:29,000 p=4353 u=ubuntu |  localhost                  : ok=3    changed=0    unreachable=1    failed=0   
+2017-04-28 19:12:00,791 p=4394 u=ubuntu |   
+2017-04-28 19:12:00,792 p=4394 u=ubuntu |  /usr/bin/ansible-playbook playbook.yml -vvv
+2017-04-28 19:12:00,792 p=4394 u=ubuntu |   
+2017-04-28 19:12:00,807 p=4394 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 19:12:00,808 p=4394 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 19:12:00,819 p=4394 u=ubuntu |  <localhost> REMOTE_MODULE setup
+2017-04-28 19:12:00,826 p=4394 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493406720.83-162200752300718 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493406720.83-162200752300718 && echo $HOME/.ansible/tmp/ansible-tmp-1493406720.83-162200752300718']
+2017-04-28 19:12:00,832 p=4394 u=ubuntu |  <localhost> PUT /tmp/tmpnHsa9g TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493406720.83-162200752300718/setup
+2017-04-28 19:12:00,832 p=4394 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493406720.83-162200752300718/setup; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493406720.83-162200752300718/ >/dev/null 2>&1']
+2017-04-28 19:12:01,272 p=4394 u=ubuntu |  ok: [localhost]
+2017-04-28 19:12:01,273 p=4394 u=ubuntu |  TASK: [test-role | Verify local file] ***************************************** 
+2017-04-28 19:12:01,275 p=4394 u=ubuntu |  <127.0.0.1> REMOTE_MODULE stat path=/home/ubuntu/sami.py
+2017-04-28 19:12:01,276 p=4394 u=ubuntu |  <127.0.0.1> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493406721.28-32879022110605 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493406721.28-32879022110605 && echo $HOME/.ansible/tmp/ansible-tmp-1493406721.28-32879022110605']
+2017-04-28 19:12:01,279 p=4394 u=ubuntu |  <127.0.0.1> PUT /tmp/tmpbW5hHe TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493406721.28-32879022110605/stat
+2017-04-28 19:12:01,280 p=4394 u=ubuntu |  <127.0.0.1> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493406721.28-32879022110605/stat; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493406721.28-32879022110605/ >/dev/null 2>&1']
+2017-04-28 19:12:01,314 p=4394 u=ubuntu |  ok: [localhost] => {"changed": false, "item": "", "stat": {"exists": false}}
+2017-04-28 19:12:01,314 p=4394 u=ubuntu |  TASK: [test-role | debug var=localFileStat verbosity=True] ******************** 
+2017-04-28 19:12:01,320 p=4394 u=ubuntu |  ok: [localhost] => {
+    "item": "", 
+    "localFileStat": {
+        "changed": false, 
+        "invocation": {
+            "module_args": "path=/home/ubuntu/sami.py", 
+            "module_name": "stat"
+        }, 
+        "item": "", 
+        "stat": {
+            "exists": false
+        }
+    }
+}
+2017-04-28 19:12:01,320 p=4394 u=ubuntu |  TASK: [test-role | Copy file] ************************************************* 
+2017-04-28 19:12:01,328 p=4394 u=ubuntu |  skipping: [localhost] => (item={'invocation': {'module_name': 'stat', 'module_args': u'path=/home/ubuntu/sami.py'}, 'item': '', u'stat': {u'exists': False}, u'changed': False})
+2017-04-28 19:12:01,328 p=4394 u=ubuntu |  TASK: [test-role | debug var=FileItem verbosity=True] ************************* 
+2017-04-28 19:12:01,335 p=4394 u=ubuntu |  ok: [localhost] => {
+    "FileItem": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "changed": false, 
+                "skipped": true
+            }
+        ]
+    }, 
+    "item": ""
+}
+2017-04-28 19:12:01,336 p=4394 u=ubuntu |  TASK: [test-role | debug var=show_msg verbosity=True] ************************* 
+2017-04-28 19:12:01,342 p=4394 u=ubuntu |  ok: [localhost] => {
+    "item": "", 
+    "show_msg": "{{ show_msg }}"
+}
+2017-04-28 19:12:01,342 p=4394 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 19:12:01,342 p=4394 u=ubuntu |  localhost                  : ok=6    changed=0    unreachable=0    failed=0   
+2017-04-28 19:12:23,999 p=4450 u=ubuntu |   
+2017-04-28 19:12:23,999 p=4450 u=ubuntu |  /usr/bin/ansible-playbook playbook.yml -vvv
+2017-04-28 19:12:23,999 p=4450 u=ubuntu |   
+2017-04-28 19:12:24,011 p=4450 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 19:12:24,012 p=4450 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 19:12:24,023 p=4450 u=ubuntu |  <localhost> REMOTE_MODULE setup
+2017-04-28 19:12:24,028 p=4450 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493406744.03-2414540587769 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493406744.03-2414540587769 && echo $HOME/.ansible/tmp/ansible-tmp-1493406744.03-2414540587769']
+2017-04-28 19:12:24,035 p=4450 u=ubuntu |  <localhost> PUT /tmp/tmpPCQuMq TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493406744.03-2414540587769/setup
+2017-04-28 19:12:24,036 p=4450 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493406744.03-2414540587769/setup; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493406744.03-2414540587769/ >/dev/null 2>&1']
+2017-04-28 19:12:24,560 p=4450 u=ubuntu |  ok: [localhost]
+2017-04-28 19:12:24,560 p=4450 u=ubuntu |  TASK: [test-role | Verify local file] ***************************************** 
+2017-04-28 19:12:24,562 p=4450 u=ubuntu |  <127.0.0.1> REMOTE_MODULE stat path=/home/ubuntu/sami.py
+2017-04-28 19:12:24,563 p=4450 u=ubuntu |  <127.0.0.1> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493406744.56-271529827642594 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493406744.56-271529827642594 && echo $HOME/.ansible/tmp/ansible-tmp-1493406744.56-271529827642594']
+2017-04-28 19:12:24,568 p=4450 u=ubuntu |  <127.0.0.1> PUT /tmp/tmp9YPCCT TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493406744.56-271529827642594/stat
+2017-04-28 19:12:24,568 p=4450 u=ubuntu |  <127.0.0.1> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493406744.56-271529827642594/stat; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493406744.56-271529827642594/ >/dev/null 2>&1']
+2017-04-28 19:12:24,603 p=4450 u=ubuntu |  ok: [localhost] => {"changed": false, "item": "", "stat": {"exists": false}}
+2017-04-28 19:12:24,603 p=4450 u=ubuntu |  TASK: [test-role | debug var=localFileStat verbosity=True] ******************** 
+2017-04-28 19:12:24,609 p=4450 u=ubuntu |  ok: [localhost] => {
+    "item": "", 
+    "localFileStat": {
+        "changed": false, 
+        "invocation": {
+            "module_args": "path=/home/ubuntu/sami.py", 
+            "module_name": "stat"
+        }, 
+        "item": "", 
+        "stat": {
+            "exists": false
+        }
+    }
+}
+2017-04-28 19:12:24,610 p=4450 u=ubuntu |  TASK: [test-role | Copy file] ************************************************* 
+2017-04-28 19:12:24,617 p=4450 u=ubuntu |  skipping: [localhost] => (item={'invocation': {'module_name': 'stat', 'module_args': u'path=/home/ubuntu/sami.py'}, 'item': '', u'stat': {u'exists': False}, u'changed': False})
+2017-04-28 19:12:24,617 p=4450 u=ubuntu |  TASK: [test-role | debug var=FileItem verbosity=True] ************************* 
+2017-04-28 19:12:24,623 p=4450 u=ubuntu |  ok: [localhost] => {
+    "FileItem": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "changed": false, 
+                "skipped": true
+            }
+        ]
+    }, 
+    "item": ""
+}
+2017-04-28 19:12:24,623 p=4450 u=ubuntu |  TASK: [test-role | debug var=show_msg verbosity=True] ************************* 
+2017-04-28 19:12:24,629 p=4450 u=ubuntu |  ok: [localhost] => {
+    "item": "", 
+    "show_msg": "{{ show_msg }}"
+}
+2017-04-28 19:12:24,629 p=4450 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 19:12:24,630 p=4450 u=ubuntu |  localhost                  : ok=6    changed=0    unreachable=0    failed=0   
+2017-04-28 19:13:19,472 p=4489 u=ubuntu |   
+2017-04-28 19:13:19,472 p=4489 u=ubuntu |  /usr/bin/ansible-playbook playbook.yml -vvv
+2017-04-28 19:13:19,472 p=4489 u=ubuntu |   
+2017-04-28 19:13:19,487 p=4489 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 19:13:19,488 p=4489 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 19:13:19,499 p=4489 u=ubuntu |  <localhost> REMOTE_MODULE setup
+2017-04-28 19:13:19,506 p=4489 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493406799.51-122207080943775 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493406799.51-122207080943775 && echo $HOME/.ansible/tmp/ansible-tmp-1493406799.51-122207080943775']
+2017-04-28 19:13:19,511 p=4489 u=ubuntu |  <localhost> PUT /tmp/tmpcD7gw4 TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493406799.51-122207080943775/setup
+2017-04-28 19:13:19,512 p=4489 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493406799.51-122207080943775/setup; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493406799.51-122207080943775/ >/dev/null 2>&1']
+2017-04-28 19:13:20,029 p=4489 u=ubuntu |  ok: [localhost]
+2017-04-28 19:13:20,029 p=4489 u=ubuntu |  TASK: [test-role | Verify local file] ***************************************** 
+2017-04-28 19:13:20,031 p=4489 u=ubuntu |  <127.0.0.1> REMOTE_MODULE stat path=/home/ubuntu/sami.py
+2017-04-28 19:13:20,032 p=4489 u=ubuntu |  <127.0.0.1> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493406800.03-41300977462944 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493406800.03-41300977462944 && echo $HOME/.ansible/tmp/ansible-tmp-1493406800.03-41300977462944']
+2017-04-28 19:13:20,036 p=4489 u=ubuntu |  <127.0.0.1> PUT /tmp/tmpBbGoVX TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493406800.03-41300977462944/stat
+2017-04-28 19:13:20,037 p=4489 u=ubuntu |  <127.0.0.1> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493406800.03-41300977462944/stat; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493406800.03-41300977462944/ >/dev/null 2>&1']
+2017-04-28 19:13:20,074 p=4489 u=ubuntu |  ok: [localhost] => {"changed": false, "item": "", "stat": {"exists": false}}
+2017-04-28 19:13:20,074 p=4489 u=ubuntu |  TASK: [test-role | debug var=localFileStat verbosity=True] ******************** 
+2017-04-28 19:13:20,080 p=4489 u=ubuntu |  ok: [localhost] => {
+    "item": "", 
+    "localFileStat": {
+        "changed": false, 
+        "invocation": {
+            "module_args": "path=/home/ubuntu/sami.py", 
+            "module_name": "stat"
+        }, 
+        "item": "", 
+        "stat": {
+            "exists": false
+        }
+    }
+}
+2017-04-28 19:13:20,080 p=4489 u=ubuntu |  TASK: [test-role | Copy file] ************************************************* 
+2017-04-28 19:13:20,087 p=4489 u=ubuntu |  skipping: [localhost] => (item={'invocation': {'module_name': 'stat', 'module_args': u'path=/home/ubuntu/sami.py'}, 'item': '', u'stat': {u'exists': False}, u'changed': False})
+2017-04-28 19:13:20,088 p=4489 u=ubuntu |  TASK: [test-role | debug var=FileItem verbosity=True] ************************* 
+2017-04-28 19:13:20,094 p=4489 u=ubuntu |  ok: [localhost] => {
+    "FileItem": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "changed": false, 
+                "skipped": true
+            }
+        ]
+    }, 
+    "item": ""
+}
+2017-04-28 19:13:20,095 p=4489 u=ubuntu |  TASK: [test-role | debug var=show_msg verbosity=True] ************************* 
+2017-04-28 19:13:20,100 p=4489 u=ubuntu |  ok: [localhost] => {
+    "item": "", 
+    "show_msg": "{{ show_msg }}"
+}
+2017-04-28 19:13:20,101 p=4489 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 19:13:20,101 p=4489 u=ubuntu |  localhost                  : ok=6    changed=0    unreachable=0    failed=0   
+2017-04-28 19:13:30,958 p=4528 u=ubuntu |   
+2017-04-28 19:13:30,959 p=4528 u=ubuntu |  /usr/bin/ansible-playbook playbook.yml -vvv
+2017-04-28 19:13:30,959 p=4528 u=ubuntu |   
+2017-04-28 19:13:30,968 p=4528 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 19:13:30,969 p=4528 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 19:13:30,978 p=4528 u=ubuntu |  <localhost> REMOTE_MODULE setup
+2017-04-28 19:13:30,983 p=4528 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493406810.98-44176472609470 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493406810.98-44176472609470 && echo $HOME/.ansible/tmp/ansible-tmp-1493406810.98-44176472609470']
+2017-04-28 19:13:30,994 p=4528 u=ubuntu |  <localhost> PUT /tmp/tmpZwOm7Y TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493406810.98-44176472609470/setup
+2017-04-28 19:13:30,995 p=4528 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493406810.98-44176472609470/setup; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493406810.98-44176472609470/ >/dev/null 2>&1']
+2017-04-28 19:13:31,478 p=4528 u=ubuntu |  ok: [localhost]
+2017-04-28 19:13:31,478 p=4528 u=ubuntu |  TASK: [test-role | Verify local file] ***************************************** 
+2017-04-28 19:13:31,480 p=4528 u=ubuntu |  <127.0.0.1> REMOTE_MODULE stat path=/home/ubuntu/sami.py
+2017-04-28 19:13:31,482 p=4528 u=ubuntu |  <127.0.0.1> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493406811.48-102517925262188 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493406811.48-102517925262188 && echo $HOME/.ansible/tmp/ansible-tmp-1493406811.48-102517925262188']
+2017-04-28 19:13:31,485 p=4528 u=ubuntu |  <127.0.0.1> PUT /tmp/tmp2EmnBN TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493406811.48-102517925262188/stat
+2017-04-28 19:13:31,486 p=4528 u=ubuntu |  <127.0.0.1> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493406811.48-102517925262188/stat; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493406811.48-102517925262188/ >/dev/null 2>&1']
+2017-04-28 19:13:31,520 p=4528 u=ubuntu |  ok: [localhost] => {"changed": false, "item": "", "stat": {"atime": 1493406809.500427, "ctime": 1493406809.500427, "dev": 64769, "exists": true, "gid": 1000, "inode": 131977, "isblk": false, "ischr": false, "isdir": false, "isfifo": false, "isgid": false, "islnk": false, "isreg": true, "issock": false, "isuid": false, "md5": "397063de8d41487c14ec8f5ba0ac1d5f", "mode": "0664", "mtime": 1493406809.500427, "nlink": 1, "pw_name": "ubuntu", "rgrp": true, "roth": true, "rusr": true, "size": 9, "uid": 1000, "wgrp": true, "woth": false, "wusr": true, "xgrp": false, "xoth": false, "xusr": false}}
+2017-04-28 19:13:31,520 p=4528 u=ubuntu |  TASK: [test-role | debug var=localFileStat verbosity=True] ******************** 
+2017-04-28 19:13:31,527 p=4528 u=ubuntu |  ok: [localhost] => {
+    "item": "", 
+    "localFileStat": {
+        "changed": false, 
+        "invocation": {
+            "module_args": "path=/home/ubuntu/sami.py", 
+            "module_name": "stat"
+        }, 
+        "item": "", 
+        "stat": {
+            "atime": 1493406809.500427, 
+            "ctime": 1493406809.500427, 
+            "dev": 64769, 
+            "exists": true, 
+            "gid": 1000, 
+            "inode": 131977, 
+            "isblk": false, 
+            "ischr": false, 
+            "isdir": false, 
+            "isfifo": false, 
+            "isgid": false, 
+            "islnk": false, 
+            "isreg": true, 
+            "issock": false, 
+            "isuid": false, 
+            "md5": "397063de8d41487c14ec8f5ba0ac1d5f", 
+            "mode": "0664", 
+            "mtime": 1493406809.500427, 
+            "nlink": 1, 
+            "pw_name": "ubuntu", 
+            "rgrp": true, 
+            "roth": true, 
+            "rusr": true, 
+            "size": 9, 
+            "uid": 1000, 
+            "wgrp": true, 
+            "woth": false, 
+            "wusr": true, 
+            "xgrp": false, 
+            "xoth": false, 
+            "xusr": false
+        }
+    }
+}
+2017-04-28 19:13:31,527 p=4528 u=ubuntu |  TASK: [test-role | Copy file] ************************************************* 
+2017-04-28 19:13:31,540 p=4528 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', u'rc=0; [ -r "/home/ubuntu/files/sami.py" ] || rc=2; [ -f "/home/ubuntu/files/sami.py" ] || rc=1; [ -d "/home/ubuntu/files/sami.py" ] && echo 3 && exit 0; (/usr/bin/md5sum /home/ubuntu/files/sami.py 2>/dev/null) || (/sbin/md5sum -q /home/ubuntu/files/sami.py 2>/dev/null) || (/usr/bin/digest -a md5 /home/ubuntu/files/sami.py 2>/dev/null) || (/sbin/md5 -q /home/ubuntu/files/sami.py 2>/dev/null) || (/usr/bin/md5 -n /home/ubuntu/files/sami.py 2>/dev/null) || (/bin/md5 -q /home/ubuntu/files/sami.py 2>/dev/null) || (/usr/bin/csum -h MD5 /home/ubuntu/files/sami.py 2>/dev/null) || (/bin/csum -h MD5 /home/ubuntu/files/sami.py 2>/dev/null) || (echo "${rc} /home/ubuntu/files/sami.py")']
+2017-04-28 19:13:31,545 p=4528 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493406811.54-84300322787377 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493406811.54-84300322787377 && echo $HOME/.ansible/tmp/ansible-tmp-1493406811.54-84300322787377']
+2017-04-28 19:13:31,548 p=4528 u=ubuntu |  <localhost> PUT /home/ubuntu/sami.py TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493406811.54-84300322787377/source
+2017-04-28 19:13:31,549 p=4528 u=ubuntu |  <localhost> PUT /tmp/tmpCuFRXu TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493406811.54-84300322787377/copy
+2017-04-28 19:13:31,550 p=4528 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493406811.54-84300322787377/copy; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493406811.54-84300322787377/ >/dev/null 2>&1']
+2017-04-28 19:13:31,586 p=4528 u=ubuntu |  changed: [localhost] => (item={'invocation': {'module_name': 'stat', 'module_args': u'path=/home/ubuntu/sami.py'}, 'item': '', u'stat': {u'uid': 1000, u'exists': True, u'woth': False, u'mtime': 1493406809.500427, u'inode': 131977, u'isgid': False, u'size': 9, u'wgrp': True, u'isuid': False, u'isreg': True, u'pw_name': u'ubuntu', u'gid': 1000, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'xusr': False, u'atime': 1493406809.500427, u'md5': u'397063de8d41487c14ec8f5ba0ac1d5f', u'isdir': False, u'ctime': 1493406809.500427, u'isblk': False, u'xgrp': False, u'dev': 64769, u'roth': True, u'isfifo': False, u'mode': u'0664', u'islnk': False}, u'changed': False}) => {"changed": true, "dest": "/home/ubuntu/files/sami.py", "gid": 1000, "group": "ubuntu", "item": {"changed": false, "invocation": {"module_args": "path=/home/ubuntu/sami.py", "module_name": "stat"}, "item": "", "stat": {"atime": 1493406809.500427, "ctime": 1493406809.500427, "dev": 64769, "exists": true, "gid": 1000, "inode": 131977, "isblk": false, "ischr": false, "isdir": false, "isfifo": false, "isgid": false, "islnk": false, "isreg": true, "issock": false, "isuid": false, "md5": "397063de8d41487c14ec8f5ba0ac1d5f", "mode": "0664", "mtime": 1493406809.500427, "nlink": 1, "pw_name": "ubuntu", "rgrp": true, "roth": true, "rusr": true, "size": 9, "uid": 1000, "wgrp": true, "woth": false, "wusr": true, "xgrp": false, "xoth": false, "xusr": false}}, "md5sum": "397063de8d41487c14ec8f5ba0ac1d5f", "mode": "0664", "owner": "ubuntu", "size": 9, "src": "/home/ubuntu/.ansible/tmp/ansible-tmp-1493406811.54-84300322787377/source", "state": "file", "uid": 1000}
+2017-04-28 19:13:31,587 p=4528 u=ubuntu |  TASK: [test-role | debug var=FileItem verbosity=True] ************************* 
+2017-04-28 19:13:31,593 p=4528 u=ubuntu |  ok: [localhost] => {
+    "FileItem": {
+        "changed": true, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "changed": true, 
+                "dest": "/home/ubuntu/files/sami.py", 
+                "gid": 1000, 
+                "group": "ubuntu", 
+                "invocation": {
+                    "module_args": "src=/home/ubuntu/sami.py dest=/home/ubuntu/files/", 
+                    "module_name": "copy"
+                }, 
+                "item": {
+                    "changed": false, 
+                    "invocation": {
+                        "module_args": "path=/home/ubuntu/sami.py", 
+                        "module_name": "stat"
+                    }, 
+                    "item": "", 
+                    "stat": {
+                        "atime": 1493406809.500427, 
+                        "ctime": 1493406809.500427, 
+                        "dev": 64769, 
+                        "exists": true, 
+                        "gid": 1000, 
+                        "inode": 131977, 
+                        "isblk": false, 
+                        "ischr": false, 
+                        "isdir": false, 
+                        "isfifo": false, 
+                        "isgid": false, 
+                        "islnk": false, 
+                        "isreg": true, 
+                        "issock": false, 
+                        "isuid": false, 
+                        "md5": "397063de8d41487c14ec8f5ba0ac1d5f", 
+                        "mode": "0664", 
+                        "mtime": 1493406809.500427, 
+                        "nlink": 1, 
+                        "pw_name": "ubuntu", 
+                        "rgrp": true, 
+                        "roth": true, 
+                        "rusr": true, 
+                        "size": 9, 
+                        "uid": 1000, 
+                        "wgrp": true, 
+                        "woth": false, 
+                        "wusr": true, 
+                        "xgrp": false, 
+                        "xoth": false, 
+                        "xusr": false
+                    }
+                }, 
+                "md5sum": "397063de8d41487c14ec8f5ba0ac1d5f", 
+                "mode": "0664", 
+                "owner": "ubuntu", 
+                "size": 9, 
+                "src": "/home/ubuntu/.ansible/tmp/ansible-tmp-1493406811.54-84300322787377/source", 
+                "state": "file", 
+                "uid": 1000
+            }
+        ]
+    }, 
+    "item": ""
+}
+2017-04-28 19:13:31,594 p=4528 u=ubuntu |  TASK: [test-role | debug var=show_msg verbosity=True] ************************* 
+2017-04-28 19:13:31,599 p=4528 u=ubuntu |  ok: [localhost] => {
+    "item": "", 
+    "show_msg": "{{ show_msg }}"
+}
+2017-04-28 19:13:31,599 p=4528 u=ubuntu |  NOTIFIED: [test-role | sample-handler] **************************************** 
+2017-04-28 19:13:31,603 p=4528 u=ubuntu |  ok: [localhost] => {"ansible_facts": {"show_msg": true}, "item": ""}
+2017-04-28 19:13:31,603 p=4528 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 19:13:31,604 p=4528 u=ubuntu |  localhost                  : ok=7    changed=1    unreachable=0    failed=0   
+2017-04-28 19:17:19,665 p=4618 u=ubuntu |   
+2017-04-28 19:17:19,665 p=4618 u=ubuntu |  /usr/bin/ansible-playbook playbook.yml -vvv
+2017-04-28 19:17:19,665 p=4618 u=ubuntu |   
+2017-04-28 19:17:19,681 p=4618 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 19:17:19,682 p=4618 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 19:17:19,694 p=4618 u=ubuntu |  <localhost> REMOTE_MODULE setup
+2017-04-28 19:17:19,702 p=4618 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493407039.7-93233188669575 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493407039.7-93233188669575 && echo $HOME/.ansible/tmp/ansible-tmp-1493407039.7-93233188669575']
+2017-04-28 19:17:19,707 p=4618 u=ubuntu |  <localhost> PUT /tmp/tmpqfVMQJ TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493407039.7-93233188669575/setup
+2017-04-28 19:17:19,708 p=4618 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493407039.7-93233188669575/setup; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493407039.7-93233188669575/ >/dev/null 2>&1']
+2017-04-28 19:17:20,178 p=4618 u=ubuntu |  ok: [localhost]
+2017-04-28 19:17:20,178 p=4618 u=ubuntu |  TASK: [test-role | Verify local file] ***************************************** 
+2017-04-28 19:17:20,180 p=4618 u=ubuntu |  <127.0.0.1> REMOTE_MODULE stat path=/home/ubuntu/sami.py
+2017-04-28 19:17:20,182 p=4618 u=ubuntu |  <127.0.0.1> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493407040.18-189016076815896 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493407040.18-189016076815896 && echo $HOME/.ansible/tmp/ansible-tmp-1493407040.18-189016076815896']
+2017-04-28 19:17:20,194 p=4618 u=ubuntu |  <127.0.0.1> PUT /tmp/tmp6ACzdT TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493407040.18-189016076815896/stat
+2017-04-28 19:17:20,194 p=4618 u=ubuntu |  <127.0.0.1> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493407040.18-189016076815896/stat; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493407040.18-189016076815896/ >/dev/null 2>&1']
+2017-04-28 19:17:20,231 p=4618 u=ubuntu |  ok: [localhost] => {"changed": false, "item": "", "stat": {"exists": false}}
+2017-04-28 19:17:20,231 p=4618 u=ubuntu |  TASK: [test-role | debug var=localFileStat verbosity=True] ******************** 
+2017-04-28 19:17:20,238 p=4618 u=ubuntu |  ok: [localhost] => {
+    "item": "", 
+    "localFileStat": {
+        "changed": false, 
+        "invocation": {
+            "module_args": "path=/home/ubuntu/sami.py", 
+            "module_name": "stat"
+        }, 
+        "item": "", 
+        "stat": {
+            "exists": false
+        }
+    }
+}
+2017-04-28 19:17:20,238 p=4618 u=ubuntu |  TASK: [test-role | Copy file] ************************************************* 
+2017-04-28 19:17:20,246 p=4618 u=ubuntu |  skipping: [localhost] => (item={'invocation': {'module_name': 'stat', 'module_args': u'path=/home/ubuntu/sami.py'}, 'item': '', u'stat': {u'exists': False}, u'changed': False})
+2017-04-28 19:17:20,246 p=4618 u=ubuntu |  TASK: [test-role | debug var=FileItem verbosity=True] ************************* 
+2017-04-28 19:17:20,253 p=4618 u=ubuntu |  ok: [localhost] => {
+    "FileItem": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "changed": false, 
+                "skipped": true
+            }
+        ]
+    }, 
+    "item": ""
+}
+2017-04-28 19:17:20,253 p=4618 u=ubuntu |  TASK: [test-role | debug var=show_msg verbosity=True] ************************* 
+2017-04-28 19:17:20,258 p=4618 u=ubuntu |  ok: [localhost] => {
+    "item": "", 
+    "show_msg": "{{ show_msg }}"
+}
+2017-04-28 19:17:20,259 p=4618 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 19:17:20,259 p=4618 u=ubuntu |  localhost                  : ok=6    changed=0    unreachable=0    failed=0   
+2017-04-28 19:18:26,346 p=4738 u=ubuntu |   
+2017-04-28 19:18:26,346 p=4738 u=ubuntu |  /usr/bin/ansible-playbook playbook.yml -vvv
+2017-04-28 19:18:26,346 p=4738 u=ubuntu |   
+2017-04-28 19:18:26,356 p=4738 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 19:18:26,357 p=4738 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 19:18:26,366 p=4738 u=ubuntu |  <localhost> REMOTE_MODULE setup
+2017-04-28 19:18:26,371 p=4738 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493407106.37-164377109028489 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493407106.37-164377109028489 && echo $HOME/.ansible/tmp/ansible-tmp-1493407106.37-164377109028489']
+2017-04-28 19:18:26,375 p=4738 u=ubuntu |  <localhost> PUT /tmp/tmp2ZbpP9 TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493407106.37-164377109028489/setup
+2017-04-28 19:18:26,376 p=4738 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493407106.37-164377109028489/setup; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493407106.37-164377109028489/ >/dev/null 2>&1']
+2017-04-28 19:18:26,889 p=4738 u=ubuntu |  ok: [localhost]
+2017-04-28 19:18:26,889 p=4738 u=ubuntu |  TASK: [test-role | Verify local file] ***************************************** 
+2017-04-28 19:18:26,892 p=4738 u=ubuntu |  <127.0.0.1> REMOTE_MODULE stat path=./testFile.py
+2017-04-28 19:18:26,894 p=4738 u=ubuntu |  <127.0.0.1> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493407106.89-88388258924634 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493407106.89-88388258924634 && echo $HOME/.ansible/tmp/ansible-tmp-1493407106.89-88388258924634']
+2017-04-28 19:18:26,904 p=4738 u=ubuntu |  <127.0.0.1> PUT /tmp/tmpmoQLOi TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493407106.89-88388258924634/stat
+2017-04-28 19:18:26,905 p=4738 u=ubuntu |  <127.0.0.1> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493407106.89-88388258924634/stat; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493407106.89-88388258924634/ >/dev/null 2>&1']
+2017-04-28 19:18:26,952 p=4738 u=ubuntu |  ok: [localhost] => {"changed": false, "item": "", "stat": {"exists": false}}
+2017-04-28 19:18:26,953 p=4738 u=ubuntu |  TASK: [test-role | debug var=localFileStat verbosity=True] ******************** 
+2017-04-28 19:18:26,960 p=4738 u=ubuntu |  ok: [localhost] => {
+    "item": "", 
+    "localFileStat": {
+        "changed": false, 
+        "invocation": {
+            "module_args": "path=./testFile.py", 
+            "module_name": "stat"
+        }, 
+        "item": "", 
+        "stat": {
+            "exists": false
+        }
+    }
+}
+2017-04-28 19:18:26,960 p=4738 u=ubuntu |  TASK: [test-role | Copy file] ************************************************* 
+2017-04-28 19:18:26,970 p=4738 u=ubuntu |  skipping: [localhost] => (item={'invocation': {'module_name': 'stat', 'module_args': u'path=./testFile.py'}, 'item': '', u'stat': {u'exists': False}, u'changed': False})
+2017-04-28 19:18:26,970 p=4738 u=ubuntu |  TASK: [test-role | debug var=FileItem verbosity=True] ************************* 
+2017-04-28 19:18:26,977 p=4738 u=ubuntu |  ok: [localhost] => {
+    "FileItem": {
+        "changed": false, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "changed": false, 
+                "skipped": true
+            }
+        ]
+    }, 
+    "item": ""
+}
+2017-04-28 19:18:26,978 p=4738 u=ubuntu |  TASK: [test-role | debug var=show_msg verbosity=True] ************************* 
+2017-04-28 19:18:26,983 p=4738 u=ubuntu |  ok: [localhost] => {
+    "item": "", 
+    "show_msg": "{{ show_msg }}"
+}
+2017-04-28 19:18:26,984 p=4738 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 19:18:26,984 p=4738 u=ubuntu |  localhost                  : ok=6    changed=0    unreachable=0    failed=0   
+2017-04-28 19:19:15,720 p=4804 u=ubuntu |   
+2017-04-28 19:19:15,720 p=4804 u=ubuntu |  /usr/bin/ansible-playbook playbook.yml -vvv
+2017-04-28 19:19:15,720 p=4804 u=ubuntu |   
+2017-04-28 19:19:15,730 p=4804 u=ubuntu |  PLAY [all] ******************************************************************** 
+2017-04-28 19:19:15,730 p=4804 u=ubuntu |  GATHERING FACTS *************************************************************** 
+2017-04-28 19:19:15,750 p=4804 u=ubuntu |  <localhost> REMOTE_MODULE setup
+2017-04-28 19:19:15,754 p=4804 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493407155.75-188681583551070 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493407155.75-188681583551070 && echo $HOME/.ansible/tmp/ansible-tmp-1493407155.75-188681583551070']
+2017-04-28 19:19:15,763 p=4804 u=ubuntu |  <localhost> PUT /tmp/tmpxPlDhW TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493407155.75-188681583551070/setup
+2017-04-28 19:19:15,764 p=4804 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493407155.75-188681583551070/setup; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493407155.75-188681583551070/ >/dev/null 2>&1']
+2017-04-28 19:19:16,235 p=4804 u=ubuntu |  ok: [localhost]
+2017-04-28 19:19:16,235 p=4804 u=ubuntu |  TASK: [test-role | Verify local file] ***************************************** 
+2017-04-28 19:19:16,237 p=4804 u=ubuntu |  <127.0.0.1> REMOTE_MODULE stat path=./testFile.py
+2017-04-28 19:19:16,238 p=4804 u=ubuntu |  <127.0.0.1> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493407156.24-69611224747825 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493407156.24-69611224747825 && echo $HOME/.ansible/tmp/ansible-tmp-1493407156.24-69611224747825']
+2017-04-28 19:19:16,242 p=4804 u=ubuntu |  <127.0.0.1> PUT /tmp/tmpeF0UBH TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493407156.24-69611224747825/stat
+2017-04-28 19:19:16,243 p=4804 u=ubuntu |  <127.0.0.1> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493407156.24-69611224747825/stat; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493407156.24-69611224747825/ >/dev/null 2>&1']
+2017-04-28 19:19:16,293 p=4804 u=ubuntu |  ok: [localhost] => {"changed": false, "item": "", "stat": {"atime": 1493407152.776427, "ctime": 1493407152.776427, "dev": 64769, "exists": true, "gid": 1000, "inode": 131970, "isblk": false, "ischr": false, "isdir": false, "isfifo": false, "isgid": false, "islnk": false, "isreg": true, "issock": false, "isuid": false, "md5": "e59ff97941044f85df5297e1c302d260", "mode": "0664", "mtime": 1493407152.776427, "nlink": 1, "pw_name": "ubuntu", "rgrp": true, "roth": true, "rusr": true, "size": 12, "uid": 1000, "wgrp": true, "woth": false, "wusr": true, "xgrp": false, "xoth": false, "xusr": false}}
+2017-04-28 19:19:16,294 p=4804 u=ubuntu |  TASK: [test-role | debug var=localFileStat verbosity=True] ******************** 
+2017-04-28 19:19:16,300 p=4804 u=ubuntu |  ok: [localhost] => {
+    "item": "", 
+    "localFileStat": {
+        "changed": false, 
+        "invocation": {
+            "module_args": "path=./testFile.py", 
+            "module_name": "stat"
+        }, 
+        "item": "", 
+        "stat": {
+            "atime": 1493407152.776427, 
+            "ctime": 1493407152.776427, 
+            "dev": 64769, 
+            "exists": true, 
+            "gid": 1000, 
+            "inode": 131970, 
+            "isblk": false, 
+            "ischr": false, 
+            "isdir": false, 
+            "isfifo": false, 
+            "isgid": false, 
+            "islnk": false, 
+            "isreg": true, 
+            "issock": false, 
+            "isuid": false, 
+            "md5": "e59ff97941044f85df5297e1c302d260", 
+            "mode": "0664", 
+            "mtime": 1493407152.776427, 
+            "nlink": 1, 
+            "pw_name": "ubuntu", 
+            "rgrp": true, 
+            "roth": true, 
+            "rusr": true, 
+            "size": 12, 
+            "uid": 1000, 
+            "wgrp": true, 
+            "woth": false, 
+            "wusr": true, 
+            "xgrp": false, 
+            "xoth": false, 
+            "xusr": false
+        }
+    }
+}
+2017-04-28 19:19:16,301 p=4804 u=ubuntu |  TASK: [test-role | Copy file] ************************************************* 
+2017-04-28 19:19:16,311 p=4804 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', u'rc=0; [ -r "./files/testFile.py" ] || rc=2; [ -f "./files/testFile.py" ] || rc=1; [ -d "./files/testFile.py" ] && echo 3 && exit 0; (/usr/bin/md5sum ./files/testFile.py 2>/dev/null) || (/sbin/md5sum -q ./files/testFile.py 2>/dev/null) || (/usr/bin/digest -a md5 ./files/testFile.py 2>/dev/null) || (/sbin/md5 -q ./files/testFile.py 2>/dev/null) || (/usr/bin/md5 -n ./files/testFile.py 2>/dev/null) || (/bin/md5 -q ./files/testFile.py 2>/dev/null) || (/usr/bin/csum -h MD5 ./files/testFile.py 2>/dev/null) || (/bin/csum -h MD5 ./files/testFile.py 2>/dev/null) || (echo "${rc} ./files/testFile.py")']
+2017-04-28 19:19:16,330 p=4804 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', 'mkdir -p $HOME/.ansible/tmp/ansible-tmp-1493407156.33-155065283901117 && chmod a+rx $HOME/.ansible/tmp/ansible-tmp-1493407156.33-155065283901117 && echo $HOME/.ansible/tmp/ansible-tmp-1493407156.33-155065283901117']
+2017-04-28 19:19:16,334 p=4804 u=ubuntu |  <localhost> PUT /home/ubuntu/ansible/testFile.py TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493407156.33-155065283901117/source
+2017-04-28 19:19:16,335 p=4804 u=ubuntu |  <localhost> PUT /tmp/tmpsaZXzH TO /home/ubuntu/.ansible/tmp/ansible-tmp-1493407156.33-155065283901117/copy
+2017-04-28 19:19:16,336 p=4804 u=ubuntu |  <localhost> EXEC ['/bin/sh', '-c', '/usr/bin/python /home/ubuntu/.ansible/tmp/ansible-tmp-1493407156.33-155065283901117/copy; rm -rf /home/ubuntu/.ansible/tmp/ansible-tmp-1493407156.33-155065283901117/ >/dev/null 2>&1']
+2017-04-28 19:19:16,374 p=4804 u=ubuntu |  changed: [localhost] => (item={'invocation': {'module_name': 'stat', 'module_args': u'path=./testFile.py'}, 'item': '', u'stat': {u'uid': 1000, u'exists': True, u'woth': False, u'mtime': 1493407152.776427, u'inode': 131970, u'isgid': False, u'size': 12, u'wgrp': True, u'isuid': False, u'isreg': True, u'pw_name': u'ubuntu', u'gid': 1000, u'ischr': False, u'wusr': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'xusr': False, u'atime': 1493407152.776427, u'md5': u'e59ff97941044f85df5297e1c302d260', u'isdir': False, u'ctime': 1493407152.776427, u'isblk': False, u'xgrp': False, u'dev': 64769, u'roth': True, u'isfifo': False, u'mode': u'0664', u'islnk': False}, u'changed': False}) => {"changed": true, "dest": "./files/testFile.py", "gid": 1000, "group": "ubuntu", "item": {"changed": false, "invocation": {"module_args": "path=./testFile.py", "module_name": "stat"}, "item": "", "stat": {"atime": 1493407152.776427, "ctime": 1493407152.776427, "dev": 64769, "exists": true, "gid": 1000, "inode": 131970, "isblk": false, "ischr": false, "isdir": false, "isfifo": false, "isgid": false, "islnk": false, "isreg": true, "issock": false, "isuid": false, "md5": "e59ff97941044f85df5297e1c302d260", "mode": "0664", "mtime": 1493407152.776427, "nlink": 1, "pw_name": "ubuntu", "rgrp": true, "roth": true, "rusr": true, "size": 12, "uid": 1000, "wgrp": true, "woth": false, "wusr": true, "xgrp": false, "xoth": false, "xusr": false}}, "md5sum": "e59ff97941044f85df5297e1c302d260", "mode": "0664", "owner": "ubuntu", "size": 12, "src": "/home/ubuntu/.ansible/tmp/ansible-tmp-1493407156.33-155065283901117/source", "state": "file", "uid": 1000}
+2017-04-28 19:19:16,374 p=4804 u=ubuntu |  TASK: [test-role | debug var=FileItem verbosity=True] ************************* 
+2017-04-28 19:19:16,382 p=4804 u=ubuntu |  ok: [localhost] => {
+    "FileItem": {
+        "changed": true, 
+        "msg": "All items completed", 
+        "results": [
+            {
+                "changed": true, 
+                "dest": "./files/testFile.py", 
+                "gid": 1000, 
+                "group": "ubuntu", 
+                "invocation": {
+                    "module_args": "src=./testFile.py dest=./files/", 
+                    "module_name": "copy"
+                }, 
+                "item": {
+                    "changed": false, 
+                    "invocation": {
+                        "module_args": "path=./testFile.py", 
+                        "module_name": "stat"
+                    }, 
+                    "item": "", 
+                    "stat": {
+                        "atime": 1493407152.776427, 
+                        "ctime": 1493407152.776427, 
+                        "dev": 64769, 
+                        "exists": true, 
+                        "gid": 1000, 
+                        "inode": 131970, 
+                        "isblk": false, 
+                        "ischr": false, 
+                        "isdir": false, 
+                        "isfifo": false, 
+                        "isgid": false, 
+                        "islnk": false, 
+                        "isreg": true, 
+                        "issock": false, 
+                        "isuid": false, 
+                        "md5": "e59ff97941044f85df5297e1c302d260", 
+                        "mode": "0664", 
+                        "mtime": 1493407152.776427, 
+                        "nlink": 1, 
+                        "pw_name": "ubuntu", 
+                        "rgrp": true, 
+                        "roth": true, 
+                        "rusr": true, 
+                        "size": 12, 
+                        "uid": 1000, 
+                        "wgrp": true, 
+                        "woth": false, 
+                        "wusr": true, 
+                        "xgrp": false, 
+                        "xoth": false, 
+                        "xusr": false
+                    }
+                }, 
+                "md5sum": "e59ff97941044f85df5297e1c302d260", 
+                "mode": "0664", 
+                "owner": "ubuntu", 
+                "size": 12, 
+                "src": "/home/ubuntu/.ansible/tmp/ansible-tmp-1493407156.33-155065283901117/source", 
+                "state": "file", 
+                "uid": 1000
+            }
+        ]
+    }, 
+    "item": ""
+}
+2017-04-28 19:19:16,382 p=4804 u=ubuntu |  TASK: [test-role | debug var=show_msg verbosity=True] ************************* 
+2017-04-28 19:19:16,387 p=4804 u=ubuntu |  ok: [localhost] => {
+    "item": "", 
+    "show_msg": "{{ show_msg }}"
+}
+2017-04-28 19:19:16,387 p=4804 u=ubuntu |  NOTIFIED: [test-role | sample-handler] **************************************** 
+2017-04-28 19:19:16,391 p=4804 u=ubuntu |  ok: [localhost] => {"ansible_facts": {"show_msg": true}, "item": ""}
+2017-04-28 19:19:16,392 p=4804 u=ubuntu |  PLAY RECAP ******************************************************************** 
+2017-04-28 19:19:16,392 p=4804 u=ubuntu |  localhost                  : ok=7    changed=1    unreachable=0    failed=0   
