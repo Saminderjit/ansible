@@ -6,7 +6,24 @@
    - destPath: './files/'
    - sam: ['a','b']
    - sim:
+  pre_tasks:
+   - name: running hello world program from the playbook
+     script: ./scripts/run_hello_world.py
+     tags: local_play
+   - name: create a directory
+     path: ./saminder/inventory
+     state: directory
+     mode: 0755
+   - name: copy the sample folder into other folder
+     copy:
+      src: ./inventory/
+      dest: ./saminder/inventory
+      mode: u=r,g=r,o=r
   roles:
    - test-role
+  post_tasks:
+   - name: removing copied files
+     src: ./saminder/inventory
+     state: absent
 
 

@@ -1,9 +1,12 @@
 ---
+- name: running the script
+  script: ./scripts/run_hello_world.py
+
 - name: Verify local file
   local_action: stat path={{ defaultPath }}
   register: "localFileStat"
 
-- debug: var=localFileStat verbosity=True
+- debug: var=localFileStat verbosity=2
 
 - name: Copy file
   copy: src={{defaultPath}} dest={{destPath}}
@@ -14,6 +17,6 @@
   - "{{ localFileStat}}"
   when: item.stat.exists == True
 
-- debug: var=FileItem verbosity=True
-- debug: var=show_msg verbosity=True
+- debug: var=FileItem verbosity=2
+- debug: var=show_msg verbosity=2
   

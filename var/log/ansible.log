@@ -974,3 +974,853 @@ Should be written as:
 2017-04-28 19:19:16,391 p=4804 u=ubuntu |  ok: [localhost] => {"ansible_facts": {"show_msg": true}, "item": ""}
 2017-04-28 19:19:16,392 p=4804 u=ubuntu |  PLAY RECAP ******************************************************************** 
 2017-04-28 19:19:16,392 p=4804 u=ubuntu |  localhost                  : ok=7    changed=1    unreachable=0    failed=0   
+2017-09-18 16:36:14,745 p=18229 u=sandvine |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/sandvine/ansible/playbook.yml': line 10, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  script: ./run_hello_world.py
+    args:
+        ^ here
+
+2017-09-18 16:36:45,860 p=18767 u=sandvine |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/sandvine/ansible/playbook.yml': line 9, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+   - sim:
+  - script: ./run_hello_world.py
+  ^ here
+
+2017-09-18 16:37:56,840 p=19981 u=sandvine |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/sandvine/ansible/roles/test-role/tasks/main.yml': line 3, column 8, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+- script: ./run_hello_world.py
+   args:
+       ^ here
+
+2017-09-18 16:39:01,320 p=21037 u=sandvine |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/sandvine/ansible/roles/test-role/tasks/main.yml': line 4, column 8, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  script: ./run_hello_world.py
+   args:
+       ^ here
+
+2017-09-18 16:39:30,949 p=21549 u=sandvine |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/sandvine/ansible/roles/test-role/tasks/main.yml': line 4, column 8, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  script: run_hello_world.py
+   args:
+       ^ here
+
+2017-09-18 16:39:39,387 p=21685 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 16:39:39,434 p=21685 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 16:39:40,268 p=21685 u=sandvine |  ok: [localhost]
+2017-09-18 16:39:40,272 p=21685 u=sandvine |  TASK [test-role : running the script] ******************************************
+2017-09-18 16:39:40,344 p=21685 u=sandvine |  fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "msg": "Unable to find 'run_hello_world.py' in expected paths."}
+2017-09-18 16:39:40,346 p=21685 u=sandvine |  	to retry, use: --limit @/home/sandvine/ansible/playbook.retry
+
+2017-09-18 16:39:40,346 p=21685 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 16:39:40,347 p=21685 u=sandvine |  localhost                  : ok=1    changed=0    unreachable=0    failed=1   
+2017-09-18 16:39:58,525 p=22067 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 16:39:58,569 p=22067 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 16:39:59,247 p=22067 u=sandvine |  ok: [localhost]
+2017-09-18 16:39:59,252 p=22067 u=sandvine |  TASK [test-role : running the script] ******************************************
+2017-09-18 16:39:59,300 p=22067 u=sandvine |  fatal: [localhost]: FAILED! => {"changed": false, "failed": true, "msg": "Unable to find 'run_hello_world.py' in expected paths."}
+2017-09-18 16:39:59,302 p=22067 u=sandvine |  	to retry, use: --limit @/home/sandvine/ansible/playbook.retry
+
+2017-09-18 16:39:59,302 p=22067 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 16:39:59,303 p=22067 u=sandvine |  localhost                  : ok=1    changed=0    unreachable=0    failed=1   
+2017-09-18 16:40:28,579 p=22614 u=sandvine |  Using /home/sandvine/ansible/ansible.cfg as config file
+2017-09-18 16:40:28,735 p=22614 u=sandvine |  PLAYBOOK: playbook.yml *********************************************************
+2017-09-18 16:40:28,735 p=22614 u=sandvine |  1 plays in playbook.yml
+2017-09-18 16:40:28,739 p=22614 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 16:40:28,791 p=22614 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 16:40:29,159 p=22614 u=sandvine |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/core/system/setup.py
+2017-09-18 16:40:29,491 p=22614 u=sandvine |  ok: [localhost]
+2017-09-18 16:40:29,494 p=22614 u=sandvine |  TASK [test-role : running the script] ******************************************
+2017-09-18 16:40:29,494 p=22614 u=sandvine |  task path: /home/sandvine/ansible/roles/test-role/tasks/main.yml:2
+2017-09-18 16:40:29,536 p=22614 u=sandvine |  fatal: [localhost]: FAILED! => {
+    "changed": false, 
+    "failed": true, 
+    "msg": "Unable to find './run_hello_world.py' in expected paths."
+}
+2017-09-18 16:40:29,541 p=22614 u=sandvine |  	to retry, use: --limit @/home/sandvine/ansible/playbook.retry
+
+2017-09-18 16:40:29,541 p=22614 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 16:40:29,542 p=22614 u=sandvine |  localhost                  : ok=1    changed=0    unreachable=0    failed=1   
+2017-09-18 16:41:21,903 p=23549 u=sandvine |  Using /home/sandvine/ansible/ansible.cfg as config file
+2017-09-18 16:41:21,923 p=23549 u=sandvine |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/sandvine/ansible/playbook.yml': line 9, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+   - sim:
+  - script: ./run_hello_world.py
+  ^ here
+
+2017-09-18 16:41:41,738 p=23873 u=sandvine |  Using /home/sandvine/ansible/ansible.cfg as config file
+2017-09-18 16:41:41,760 p=23873 u=sandvine |  ERROR! 'script' is not a valid attribute for a Play
+
+The error appears to have been in '/home/sandvine/ansible/playbook.yml': line 3, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- hosts: all
+  ^ here
+
+2017-09-18 16:42:25,589 p=24604 u=sandvine |  Using /home/sandvine/ansible/ansible.cfg as config file
+2017-09-18 16:42:25,612 p=24604 u=sandvine |  ERROR! Syntax Error while loading YAML.
+
+
+The error appears to have been in '/home/sandvine/ansible/playbook.yml': line 9, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+   - sim:
+  - name: ssdd
+  ^ here
+
+2017-09-18 16:42:50,053 p=24997 u=sandvine |  Using /home/sandvine/ansible/ansible.cfg as config file
+2017-09-18 16:42:50,234 p=24997 u=sandvine |  PLAYBOOK: playbook.yml *********************************************************
+2017-09-18 16:42:50,234 p=24997 u=sandvine |  1 plays in playbook.yml
+2017-09-18 16:42:50,237 p=24997 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 16:42:50,287 p=24997 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 16:42:50,598 p=24997 u=sandvine |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/core/system/setup.py
+2017-09-18 16:42:50,955 p=24997 u=sandvine |  ok: [localhost]
+2017-09-18 16:42:50,960 p=24997 u=sandvine |  TASK [test-role : Verify local file] *******************************************
+2017-09-18 16:42:50,960 p=24997 u=sandvine |  task path: /home/sandvine/ansible/roles/test-role/tasks/main.yml:7
+2017-09-18 16:42:51,192 p=24997 u=sandvine |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/core/files/stat.py
+2017-09-18 16:42:51,374 p=24997 u=sandvine |  ok: [localhost -> localhost] => {
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "checksum_algorithm": "sha1", 
+            "follow": false, 
+            "get_checksum": true, 
+            "get_md5": true, 
+            "mime": false, 
+            "path": "./testFile.py"
+        }, 
+        "module_name": "stat"
+    }, 
+    "stat": {
+        "atime": 1505766265.7860167, 
+        "checksum": "648a6a6ffffdaa0badb23b8baf90b6168dd16b3a", 
+        "ctime": 1505766265.7860167, 
+        "dev": 64769, 
+        "executable": false, 
+        "exists": true, 
+        "gid": 1000, 
+        "gr_name": "sandvine", 
+        "inode": 530160, 
+        "isblk": false, 
+        "ischr": false, 
+        "isdir": false, 
+        "isfifo": false, 
+        "isgid": false, 
+        "islnk": false, 
+        "isreg": true, 
+        "issock": false, 
+        "isuid": false, 
+        "md5": "e59ff97941044f85df5297e1c302d260", 
+        "mode": "0664", 
+        "mtime": 1505766265.7860167, 
+        "nlink": 1, 
+        "path": "./testFile.py", 
+        "pw_name": "sandvine", 
+        "readable": true, 
+        "rgrp": true, 
+        "roth": true, 
+        "rusr": true, 
+        "size": 12, 
+        "uid": 1000, 
+        "wgrp": true, 
+        "woth": false, 
+        "writeable": true, 
+        "wusr": true, 
+        "xgrp": false, 
+        "xoth": false, 
+        "xusr": false
+    }
+}
+2017-09-18 16:42:51,377 p=24997 u=sandvine |  TASK [test-role : debug] *******************************************************
+2017-09-18 16:42:51,377 p=24997 u=sandvine |  task path: /home/sandvine/ansible/roles/test-role/tasks/main.yml:11
+2017-09-18 16:42:51,405 p=24997 u=sandvine |  An exception occurred during task execution. The full traceback is:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/ansible/executor/task_executor.py", line 126, in run
+    res = self._execute()
+  File "/usr/lib/python2.7/site-packages/ansible/executor/task_executor.py", line 502, in _execute
+    result = self._handler.run(task_vars=variables)
+  File "/usr/lib/python2.7/site-packages/ansible/plugins/action/debug.py", line 49, in run
+    verbosity = int(self._task.args['verbosity'])
+ValueError: invalid literal for int() with base 10: 'True'
+
+2017-09-18 16:42:51,406 p=24997 u=sandvine |  fatal: [localhost]: FAILED! => {
+    "failed": true, 
+    "msg": "Unexpected failure during module execution.", 
+    "stdout": ""
+}
+2017-09-18 16:42:51,408 p=24997 u=sandvine |  	to retry, use: --limit @/home/sandvine/ansible/playbook.retry
+
+2017-09-18 16:42:51,408 p=24997 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 16:42:51,408 p=24997 u=sandvine |  localhost                  : ok=2    changed=0    unreachable=0    failed=1   
+2017-09-18 16:43:11,328 p=25420 u=sandvine |  Using /home/sandvine/ansible/ansible.cfg as config file
+2017-09-18 16:43:11,486 p=25420 u=sandvine |  PLAYBOOK: playbook.yml *********************************************************
+2017-09-18 16:43:11,486 p=25420 u=sandvine |  1 plays in playbook.yml
+2017-09-18 16:43:11,489 p=25420 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 16:43:11,536 p=25420 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 16:43:11,999 p=25420 u=sandvine |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/core/system/setup.py
+2017-09-18 16:43:12,415 p=25420 u=sandvine |  ok: [localhost]
+2017-09-18 16:43:12,418 p=25420 u=sandvine |  TASK [test-role : running the script] ******************************************
+2017-09-18 16:43:12,418 p=25420 u=sandvine |  task path: /home/sandvine/ansible/roles/test-role/tasks/main.yml:2
+2017-09-18 16:43:12,466 p=25420 u=sandvine |  fatal: [localhost]: FAILED! => {
+    "changed": false, 
+    "failed": true, 
+    "msg": "Unable to find './run_hello_world.py' in expected paths."
+}
+2017-09-18 16:43:12,470 p=25420 u=sandvine |  	to retry, use: --limit @/home/sandvine/ansible/playbook.retry
+
+2017-09-18 16:43:12,470 p=25420 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 16:43:12,470 p=25420 u=sandvine |  localhost                  : ok=1    changed=0    unreachable=0    failed=1   
+2017-09-18 16:48:02,542 p=30324 u=sandvine |  Using /home/sandvine/ansible/ansible.cfg as config file
+2017-09-18 16:48:02,695 p=30324 u=sandvine |  PLAYBOOK: playbook.yml *********************************************************
+2017-09-18 16:48:02,695 p=30324 u=sandvine |  1 plays in playbook.yml
+2017-09-18 16:48:02,699 p=30324 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 16:48:02,760 p=30324 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 16:48:03,096 p=30324 u=sandvine |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/core/system/setup.py
+2017-09-18 16:48:03,461 p=30324 u=sandvine |  ok: [localhost]
+2017-09-18 16:48:03,464 p=30324 u=sandvine |  TASK [test-role : running the script] ******************************************
+2017-09-18 16:48:03,464 p=30324 u=sandvine |  task path: /home/sandvine/ansible/roles/test-role/tasks/main.yml:2
+2017-09-18 16:48:03,547 p=30324 u=sandvine |  changed: [localhost] => {
+    "changed": true, 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "./run_hello_world.py"
+        }, 
+        "module_name": "script"
+    }, 
+    "rc": 0, 
+    "stderr": "", 
+    "stdout": "hello world\n", 
+    "stdout_lines": [
+        "hello world"
+    ]
+}
+2017-09-18 16:48:03,551 p=30324 u=sandvine |  TASK [test-role : Verify local file] *******************************************
+2017-09-18 16:48:03,552 p=30324 u=sandvine |  task path: /home/sandvine/ansible/roles/test-role/tasks/main.yml:5
+2017-09-18 16:48:03,808 p=30324 u=sandvine |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/core/files/stat.py
+2017-09-18 16:48:03,999 p=30324 u=sandvine |  ok: [localhost -> localhost] => {
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "checksum_algorithm": "sha1", 
+            "follow": false, 
+            "get_checksum": true, 
+            "get_md5": true, 
+            "mime": false, 
+            "path": "./testFile.py"
+        }, 
+        "module_name": "stat"
+    }, 
+    "stat": {
+        "atime": 1505767371.3453202, 
+        "checksum": "648a6a6ffffdaa0badb23b8baf90b6168dd16b3a", 
+        "ctime": 1505766265.7860167, 
+        "dev": 64769, 
+        "executable": false, 
+        "exists": true, 
+        "gid": 1000, 
+        "gr_name": "sandvine", 
+        "inode": 530160, 
+        "isblk": false, 
+        "ischr": false, 
+        "isdir": false, 
+        "isfifo": false, 
+        "isgid": false, 
+        "islnk": false, 
+        "isreg": true, 
+        "issock": false, 
+        "isuid": false, 
+        "md5": "e59ff97941044f85df5297e1c302d260", 
+        "mode": "0664", 
+        "mtime": 1505766265.7860167, 
+        "nlink": 1, 
+        "path": "./testFile.py", 
+        "pw_name": "sandvine", 
+        "readable": true, 
+        "rgrp": true, 
+        "roth": true, 
+        "rusr": true, 
+        "size": 12, 
+        "uid": 1000, 
+        "wgrp": true, 
+        "woth": false, 
+        "writeable": true, 
+        "wusr": true, 
+        "xgrp": false, 
+        "xoth": false, 
+        "xusr": false
+    }
+}
+2017-09-18 16:48:04,002 p=30324 u=sandvine |  TASK [test-role : debug] *******************************************************
+2017-09-18 16:48:04,002 p=30324 u=sandvine |  task path: /home/sandvine/ansible/roles/test-role/tasks/main.yml:9
+2017-09-18 16:48:04,034 p=30324 u=sandvine |  An exception occurred during task execution. The full traceback is:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/ansible/executor/task_executor.py", line 126, in run
+    res = self._execute()
+  File "/usr/lib/python2.7/site-packages/ansible/executor/task_executor.py", line 502, in _execute
+    result = self._handler.run(task_vars=variables)
+  File "/usr/lib/python2.7/site-packages/ansible/plugins/action/debug.py", line 49, in run
+    verbosity = int(self._task.args['verbosity'])
+ValueError: invalid literal for int() with base 10: 'True'
+
+2017-09-18 16:48:04,035 p=30324 u=sandvine |  fatal: [localhost]: FAILED! => {
+    "failed": true, 
+    "msg": "Unexpected failure during module execution.", 
+    "stdout": ""
+}
+2017-09-18 16:48:04,036 p=30324 u=sandvine |  	to retry, use: --limit @/home/sandvine/ansible/playbook.retry
+
+2017-09-18 16:48:04,036 p=30324 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 16:48:04,037 p=30324 u=sandvine |  localhost                  : ok=3    changed=1    unreachable=0    failed=1   
+2017-09-18 16:48:57,798 p=31328 u=sandvine |  Using /home/sandvine/ansible/ansible.cfg as config file
+2017-09-18 16:48:57,941 p=31328 u=sandvine |  PLAYBOOK: playbook.yml *********************************************************
+2017-09-18 16:48:57,941 p=31328 u=sandvine |  1 plays in playbook.yml
+2017-09-18 16:48:57,955 p=31328 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 16:48:58,001 p=31328 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 16:48:58,349 p=31328 u=sandvine |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/core/system/setup.py
+2017-09-18 16:48:58,701 p=31328 u=sandvine |  ok: [localhost]
+2017-09-18 16:48:58,705 p=31328 u=sandvine |  TASK [test-role : running the script] ******************************************
+2017-09-18 16:48:58,705 p=31328 u=sandvine |  task path: /home/sandvine/ansible/roles/test-role/tasks/main.yml:2
+2017-09-18 16:48:58,749 p=31328 u=sandvine |  fatal: [localhost]: FAILED! => {
+    "changed": false, 
+    "failed": true, 
+    "msg": "Unable to find './run_hello_world.py' in expected paths."
+}
+2017-09-18 16:48:58,753 p=31328 u=sandvine |  	to retry, use: --limit @/home/sandvine/ansible/playbook.retry
+
+2017-09-18 16:48:58,754 p=31328 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 16:48:58,754 p=31328 u=sandvine |  localhost                  : ok=1    changed=0    unreachable=0    failed=1   
+2017-09-18 16:49:59,947 p=32411 u=sandvine |  Using /home/sandvine/ansible/ansible.cfg as config file
+2017-09-18 16:50:00,099 p=32411 u=sandvine |  PLAYBOOK: playbook.yml *********************************************************
+2017-09-18 16:50:00,099 p=32411 u=sandvine |  1 plays in playbook.yml
+2017-09-18 16:50:00,102 p=32411 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 16:50:00,150 p=32411 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 16:50:00,480 p=32411 u=sandvine |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/core/system/setup.py
+2017-09-18 16:50:00,893 p=32411 u=sandvine |  ok: [localhost]
+2017-09-18 16:50:00,897 p=32411 u=sandvine |  TASK [test-role : running the script] ******************************************
+2017-09-18 16:50:00,897 p=32411 u=sandvine |  task path: /home/sandvine/ansible/roles/test-role/tasks/main.yml:2
+2017-09-18 16:50:00,940 p=32411 u=sandvine |  fatal: [localhost]: FAILED! => {
+    "changed": false, 
+    "failed": true, 
+    "msg": "Unable to find './run_hello_world.py' in expected paths."
+}
+2017-09-18 16:50:00,942 p=32411 u=sandvine |  	to retry, use: --limit @/home/sandvine/ansible/playbook.retry
+
+2017-09-18 16:50:00,942 p=32411 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 16:50:00,942 p=32411 u=sandvine |  localhost                  : ok=1    changed=0    unreachable=0    failed=1   
+2017-09-18 16:51:24,357 p=1440 u=sandvine |  Using /home/sandvine/ansible/ansible.cfg as config file
+2017-09-18 16:51:24,497 p=1440 u=sandvine |  PLAYBOOK: playbook.yml *********************************************************
+2017-09-18 16:51:24,497 p=1440 u=sandvine |  1 plays in playbook.yml
+2017-09-18 16:51:24,500 p=1440 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 16:51:24,557 p=1440 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 16:51:24,900 p=1440 u=sandvine |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/core/system/setup.py
+2017-09-18 16:51:25,453 p=1440 u=sandvine |  ok: [localhost]
+2017-09-18 16:51:25,456 p=1440 u=sandvine |  TASK [test-role : running the script] ******************************************
+2017-09-18 16:51:25,456 p=1440 u=sandvine |  task path: /home/sandvine/ansible/roles/test-role/tasks/main.yml:2
+2017-09-18 16:51:25,499 p=1440 u=sandvine |  fatal: [localhost]: FAILED! => {
+    "changed": false, 
+    "failed": true, 
+    "msg": "Unable to find './run_hello_world.py' in expected paths."
+}
+2017-09-18 16:51:25,504 p=1440 u=sandvine |  	to retry, use: --limit @/home/sandvine/ansible/playbook.retry
+
+2017-09-18 16:51:25,504 p=1440 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 16:51:25,504 p=1440 u=sandvine |  localhost                  : ok=1    changed=0    unreachable=0    failed=1   
+2017-09-18 16:51:40,723 p=1812 u=sandvine |  ERROR! Missing target hosts
+2017-09-18 16:52:31,329 p=2703 u=sandvine |  Using /home/sandvine/ansible/ansible.cfg as config file
+2017-09-18 16:52:31,480 p=2703 u=sandvine |  PLAYBOOK: playbook.yml *********************************************************
+2017-09-18 16:52:31,480 p=2703 u=sandvine |  1 plays in playbook.yml
+2017-09-18 16:52:31,484 p=2703 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 16:52:31,530 p=2703 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 16:52:31,841 p=2703 u=sandvine |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/core/system/setup.py
+2017-09-18 16:52:32,236 p=2703 u=sandvine |  ok: [localhost]
+2017-09-18 16:52:32,239 p=2703 u=sandvine |  TASK [test-role : running the script] ******************************************
+2017-09-18 16:52:32,240 p=2703 u=sandvine |  task path: /home/sandvine/ansible/roles/test-role/tasks/main.yml:2
+2017-09-18 16:52:32,378 p=2703 u=sandvine |  changed: [localhost] => {
+    "changed": true, 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "./scripts/run_hello_world.py"
+        }, 
+        "module_name": "script"
+    }, 
+    "rc": 0, 
+    "stderr": "", 
+    "stdout": "hello world\n", 
+    "stdout_lines": [
+        "hello world"
+    ]
+}
+2017-09-18 16:52:32,384 p=2703 u=sandvine |  TASK [test-role : Verify local file] *******************************************
+2017-09-18 16:52:32,384 p=2703 u=sandvine |  task path: /home/sandvine/ansible/roles/test-role/tasks/main.yml:5
+2017-09-18 16:52:32,577 p=2703 u=sandvine |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/core/files/stat.py
+2017-09-18 16:52:32,736 p=2703 u=sandvine |  ok: [localhost -> localhost] => {
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "checksum_algorithm": "sha1", 
+            "follow": false, 
+            "get_checksum": true, 
+            "get_md5": true, 
+            "mime": false, 
+            "path": "./testFile.py"
+        }, 
+        "module_name": "stat"
+    }, 
+    "stat": {
+        "atime": 1505767371.3453202, 
+        "checksum": "648a6a6ffffdaa0badb23b8baf90b6168dd16b3a", 
+        "ctime": 1505766265.7860167, 
+        "dev": 64769, 
+        "executable": false, 
+        "exists": true, 
+        "gid": 1000, 
+        "gr_name": "sandvine", 
+        "inode": 530160, 
+        "isblk": false, 
+        "ischr": false, 
+        "isdir": false, 
+        "isfifo": false, 
+        "isgid": false, 
+        "islnk": false, 
+        "isreg": true, 
+        "issock": false, 
+        "isuid": false, 
+        "md5": "e59ff97941044f85df5297e1c302d260", 
+        "mode": "0664", 
+        "mtime": 1505766265.7860167, 
+        "nlink": 1, 
+        "path": "./testFile.py", 
+        "pw_name": "sandvine", 
+        "readable": true, 
+        "rgrp": true, 
+        "roth": true, 
+        "rusr": true, 
+        "size": 12, 
+        "uid": 1000, 
+        "wgrp": true, 
+        "woth": false, 
+        "writeable": true, 
+        "wusr": true, 
+        "xgrp": false, 
+        "xoth": false, 
+        "xusr": false
+    }
+}
+2017-09-18 16:52:32,739 p=2703 u=sandvine |  TASK [test-role : debug] *******************************************************
+2017-09-18 16:52:32,739 p=2703 u=sandvine |  task path: /home/sandvine/ansible/roles/test-role/tasks/main.yml:9
+2017-09-18 16:52:32,769 p=2703 u=sandvine |  An exception occurred during task execution. The full traceback is:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/ansible/executor/task_executor.py", line 126, in run
+    res = self._execute()
+  File "/usr/lib/python2.7/site-packages/ansible/executor/task_executor.py", line 502, in _execute
+    result = self._handler.run(task_vars=variables)
+  File "/usr/lib/python2.7/site-packages/ansible/plugins/action/debug.py", line 49, in run
+    verbosity = int(self._task.args['verbosity'])
+ValueError: invalid literal for int() with base 10: 'True'
+
+2017-09-18 16:52:32,769 p=2703 u=sandvine |  fatal: [localhost]: FAILED! => {
+    "failed": true, 
+    "msg": "Unexpected failure during module execution.", 
+    "stdout": ""
+}
+2017-09-18 16:52:32,771 p=2703 u=sandvine |  	to retry, use: --limit @/home/sandvine/ansible/playbook.retry
+
+2017-09-18 16:52:32,771 p=2703 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 16:52:32,771 p=2703 u=sandvine |  localhost                  : ok=3    changed=1    unreachable=0    failed=1   
+2017-09-18 16:52:45,037 p=2988 u=sandvine |  Using /home/sandvine/ansible/ansible.cfg as config file
+2017-09-18 16:52:45,176 p=2988 u=sandvine |  PLAYBOOK: playbook.yml *********************************************************
+2017-09-18 16:52:45,176 p=2988 u=sandvine |  1 plays in playbook.yml
+2017-09-18 16:52:45,179 p=2988 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 16:52:45,222 p=2988 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 16:52:45,519 p=2988 u=sandvine |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/core/system/setup.py
+2017-09-18 16:52:45,866 p=2988 u=sandvine |  ok: [localhost]
+2017-09-18 16:52:45,869 p=2988 u=sandvine |  TASK [test-role : running the script] ******************************************
+2017-09-18 16:52:45,870 p=2988 u=sandvine |  task path: /home/sandvine/ansible/roles/test-role/tasks/main.yml:2
+2017-09-18 16:52:45,958 p=2988 u=sandvine |  changed: [localhost] => {
+    "changed": true, 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "./scripts/run_hello_world.py"
+        }, 
+        "module_name": "script"
+    }, 
+    "rc": 0, 
+    "stderr": "", 
+    "stdout": "hello world\n", 
+    "stdout_lines": [
+        "hello world"
+    ]
+}
+2017-09-18 16:52:45,961 p=2988 u=sandvine |  TASK [test-role : Verify local file] *******************************************
+2017-09-18 16:52:45,962 p=2988 u=sandvine |  task path: /home/sandvine/ansible/roles/test-role/tasks/main.yml:5
+2017-09-18 16:52:46,162 p=2988 u=sandvine |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/core/files/stat.py
+2017-09-18 16:52:46,341 p=2988 u=sandvine |  ok: [localhost -> localhost] => {
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "checksum_algorithm": "sha1", 
+            "follow": false, 
+            "get_checksum": true, 
+            "get_md5": true, 
+            "mime": false, 
+            "path": "./testFile.py"
+        }, 
+        "module_name": "stat"
+    }, 
+    "stat": {
+        "atime": 1505767371.3453202, 
+        "checksum": "648a6a6ffffdaa0badb23b8baf90b6168dd16b3a", 
+        "ctime": 1505766265.7860167, 
+        "dev": 64769, 
+        "executable": false, 
+        "exists": true, 
+        "gid": 1000, 
+        "gr_name": "sandvine", 
+        "inode": 530160, 
+        "isblk": false, 
+        "ischr": false, 
+        "isdir": false, 
+        "isfifo": false, 
+        "isgid": false, 
+        "islnk": false, 
+        "isreg": true, 
+        "issock": false, 
+        "isuid": false, 
+        "md5": "e59ff97941044f85df5297e1c302d260", 
+        "mode": "0664", 
+        "mtime": 1505766265.7860167, 
+        "nlink": 1, 
+        "path": "./testFile.py", 
+        "pw_name": "sandvine", 
+        "readable": true, 
+        "rgrp": true, 
+        "roth": true, 
+        "rusr": true, 
+        "size": 12, 
+        "uid": 1000, 
+        "wgrp": true, 
+        "woth": false, 
+        "writeable": true, 
+        "wusr": true, 
+        "xgrp": false, 
+        "xoth": false, 
+        "xusr": false
+    }
+}
+2017-09-18 16:52:46,345 p=2988 u=sandvine |  TASK [test-role : debug] *******************************************************
+2017-09-18 16:52:46,345 p=2988 u=sandvine |  task path: /home/sandvine/ansible/roles/test-role/tasks/main.yml:9
+2017-09-18 16:52:46,371 p=2988 u=sandvine |  An exception occurred during task execution. The full traceback is:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/ansible/executor/task_executor.py", line 126, in run
+    res = self._execute()
+  File "/usr/lib/python2.7/site-packages/ansible/executor/task_executor.py", line 502, in _execute
+    result = self._handler.run(task_vars=variables)
+  File "/usr/lib/python2.7/site-packages/ansible/plugins/action/debug.py", line 49, in run
+    verbosity = int(self._task.args['verbosity'])
+ValueError: invalid literal for int() with base 10: 'True'
+
+2017-09-18 16:52:46,372 p=2988 u=sandvine |  fatal: [localhost]: FAILED! => {
+    "failed": true, 
+    "msg": "Unexpected failure during module execution.", 
+    "stdout": ""
+}
+2017-09-18 16:52:46,374 p=2988 u=sandvine |  	to retry, use: --limit @/home/sandvine/ansible/playbook.retry
+
+2017-09-18 16:52:46,374 p=2988 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 16:52:46,375 p=2988 u=sandvine |  localhost                  : ok=3    changed=1    unreachable=0    failed=1   
+2017-09-18 16:53:57,379 p=4385 u=sandvine |  Using /home/sandvine/ansible/ansible.cfg as config file
+2017-09-18 16:53:57,542 p=4385 u=sandvine |  PLAYBOOK: playbook.yml *********************************************************
+2017-09-18 16:53:57,543 p=4385 u=sandvine |  1 plays in playbook.yml
+2017-09-18 16:53:57,546 p=4385 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 16:53:57,610 p=4385 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 16:53:57,904 p=4385 u=sandvine |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/core/system/setup.py
+2017-09-18 16:53:58,261 p=4385 u=sandvine |  ok: [localhost]
+2017-09-18 16:53:58,264 p=4385 u=sandvine |  TASK [test-role : running the script] ******************************************
+2017-09-18 16:53:58,264 p=4385 u=sandvine |  task path: /home/sandvine/ansible/roles/test-role/tasks/main.yml:2
+2017-09-18 16:53:58,352 p=4385 u=sandvine |  changed: [localhost] => {
+    "changed": true, 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "./scripts/run_hello_world.py"
+        }, 
+        "module_name": "script"
+    }, 
+    "rc": 0, 
+    "stderr": "", 
+    "stdout": "hello world\n", 
+    "stdout_lines": [
+        "hello world"
+    ]
+}
+2017-09-18 16:53:58,356 p=4385 u=sandvine |  TASK [test-role : Verify local file] *******************************************
+2017-09-18 16:53:58,356 p=4385 u=sandvine |  task path: /home/sandvine/ansible/roles/test-role/tasks/main.yml:5
+2017-09-18 16:53:58,558 p=4385 u=sandvine |  Using module file /usr/lib/python2.7/site-packages/ansible/modules/core/files/stat.py
+2017-09-18 16:53:58,732 p=4385 u=sandvine |  ok: [localhost -> localhost] => {
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "checksum_algorithm": "sha1", 
+            "follow": false, 
+            "get_checksum": true, 
+            "get_md5": true, 
+            "mime": false, 
+            "path": "./testFile.py"
+        }, 
+        "module_name": "stat"
+    }, 
+    "stat": {
+        "atime": 1505767371.3453202, 
+        "checksum": "648a6a6ffffdaa0badb23b8baf90b6168dd16b3a", 
+        "ctime": 1505766265.7860167, 
+        "dev": 64769, 
+        "executable": false, 
+        "exists": true, 
+        "gid": 1000, 
+        "gr_name": "sandvine", 
+        "inode": 530160, 
+        "isblk": false, 
+        "ischr": false, 
+        "isdir": false, 
+        "isfifo": false, 
+        "isgid": false, 
+        "islnk": false, 
+        "isreg": true, 
+        "issock": false, 
+        "isuid": false, 
+        "md5": "e59ff97941044f85df5297e1c302d260", 
+        "mode": "0664", 
+        "mtime": 1505766265.7860167, 
+        "nlink": 1, 
+        "path": "./testFile.py", 
+        "pw_name": "sandvine", 
+        "readable": true, 
+        "rgrp": true, 
+        "roth": true, 
+        "rusr": true, 
+        "size": 12, 
+        "uid": 1000, 
+        "wgrp": true, 
+        "woth": false, 
+        "writeable": true, 
+        "wusr": true, 
+        "xgrp": false, 
+        "xoth": false, 
+        "xusr": false
+    }
+}
+2017-09-18 16:53:58,735 p=4385 u=sandvine |  TASK [test-role : debug] *******************************************************
+2017-09-18 16:53:58,735 p=4385 u=sandvine |  task path: /home/sandvine/ansible/roles/test-role/tasks/main.yml:9
+2017-09-18 16:53:58,766 p=4385 u=sandvine |  An exception occurred during task execution. The full traceback is:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/ansible/executor/task_executor.py", line 126, in run
+    res = self._execute()
+  File "/usr/lib/python2.7/site-packages/ansible/executor/task_executor.py", line 502, in _execute
+    result = self._handler.run(task_vars=variables)
+  File "/usr/lib/python2.7/site-packages/ansible/plugins/action/debug.py", line 49, in run
+    verbosity = int(self._task.args['verbosity'])
+ValueError: invalid literal for int() with base 10: 'True'
+
+2017-09-18 16:53:58,767 p=4385 u=sandvine |  fatal: [localhost]: FAILED! => {
+    "failed": true, 
+    "msg": "Unexpected failure during module execution.", 
+    "stdout": ""
+}
+2017-09-18 16:53:58,783 p=4385 u=sandvine |  	to retry, use: --limit @/home/sandvine/ansible/playbook.retry
+
+2017-09-18 16:53:58,783 p=4385 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 16:53:58,783 p=4385 u=sandvine |  localhost                  : ok=3    changed=1    unreachable=0    failed=1   
+2017-09-18 16:54:49,058 p=5394 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 16:54:49,103 p=5394 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 16:54:49,776 p=5394 u=sandvine |  ok: [localhost]
+2017-09-18 16:54:49,780 p=5394 u=sandvine |  TASK [running hello world program from the playbook] ***************************
+2017-09-18 16:54:49,865 p=5394 u=sandvine |  changed: [localhost]
+2017-09-18 16:54:49,868 p=5394 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 16:54:49,868 p=5394 u=sandvine |  localhost                  : ok=2    changed=1    unreachable=0    failed=0   
+2017-09-18 16:54:56,501 p=5579 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 16:54:56,548 p=5579 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 16:54:57,359 p=5579 u=sandvine |  ok: [localhost]
+2017-09-18 16:54:57,364 p=5579 u=sandvine |  TASK [test-role : running the script] ******************************************
+2017-09-18 16:54:57,449 p=5579 u=sandvine |  changed: [localhost]
+2017-09-18 16:54:57,453 p=5579 u=sandvine |  TASK [test-role : Verify local file] *******************************************
+2017-09-18 16:54:57,843 p=5579 u=sandvine |  ok: [localhost -> localhost]
+2017-09-18 16:54:57,846 p=5579 u=sandvine |  TASK [test-role : debug] *******************************************************
+2017-09-18 16:54:57,877 p=5579 u=sandvine |  An exception occurred during task execution. To see the full traceback, use -vvv. The error was: ValueError: invalid literal for int() with base 10: 'True'
+2017-09-18 16:54:57,878 p=5579 u=sandvine |  fatal: [localhost]: FAILED! => {"failed": true, "msg": "Unexpected failure during module execution.", "stdout": ""}
+2017-09-18 16:54:57,879 p=5579 u=sandvine |  	to retry, use: --limit @/home/sandvine/ansible/playbook.retry
+
+2017-09-18 16:54:57,880 p=5579 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 16:54:57,880 p=5579 u=sandvine |  localhost                  : ok=3    changed=1    unreachable=0    failed=1   
+2017-09-18 16:56:25,276 p=7137 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 16:56:25,325 p=7137 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 16:56:26,101 p=7137 u=sandvine |  ok: [localhost]
+2017-09-18 16:56:26,105 p=7137 u=sandvine |  TASK [test-role : running the script] ******************************************
+2017-09-18 16:56:26,194 p=7137 u=sandvine |  changed: [localhost]
+2017-09-18 16:56:26,198 p=7137 u=sandvine |  TASK [test-role : Verify local file] *******************************************
+2017-09-18 16:56:26,587 p=7137 u=sandvine |  ok: [localhost -> localhost]
+2017-09-18 16:56:26,590 p=7137 u=sandvine |  TASK [test-role : debug] *******************************************************
+2017-09-18 16:56:26,619 p=7137 u=sandvine |  skipping: [localhost]
+2017-09-18 16:56:26,623 p=7137 u=sandvine |  TASK [test-role : Copy file] ***************************************************
+2017-09-18 16:56:27,259 p=7137 u=sandvine |  ok: [localhost] => (item={u'stat': {u'uid': 1000, u'exists': True, u'woth': False, u'mtime': 1505766265.7860167, u'inode': 530160, u'isgid': False, u'size': 12, u'executable': False, u'isuid': False, u'readable': True, u'isreg': True, u'pw_name': u'sandvine', u'gid': 1000, u'ischr': False, u'wusr': True, u'writeable': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'sandvine', u'path': u'./testFile.py', u'xusr': False, u'atime': 1505767371.3453202, u'md5': u'e59ff97941044f85df5297e1c302d260', u'isdir': False, u'ctime': 1505766265.7860167, u'isblk': False, u'wgrp': True, u'xgrp': False, u'dev': 64769, u'roth': True, u'isfifo': False, u'mode': u'0664', u'checksum': u'648a6a6ffffdaa0badb23b8baf90b6168dd16b3a', u'islnk': False}, u'changed': False})
+2017-09-18 16:56:27,261 p=7137 u=sandvine |  TASK [test-role : debug] *******************************************************
+2017-09-18 16:56:27,295 p=7137 u=sandvine |  skipping: [localhost]
+2017-09-18 16:56:27,297 p=7137 u=sandvine |  TASK [test-role : debug] *******************************************************
+2017-09-18 16:56:27,332 p=7137 u=sandvine |  skipping: [localhost]
+2017-09-18 16:56:27,335 p=7137 u=sandvine |  TASK [running hello world program from the playbook] ***************************
+2017-09-18 16:56:27,443 p=7137 u=sandvine |  changed: [localhost]
+2017-09-18 16:56:27,446 p=7137 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 16:56:27,446 p=7137 u=sandvine |  localhost                  : ok=5    changed=2    unreachable=0    failed=0   
+2017-09-18 16:57:50,920 p=8794 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 16:57:50,967 p=8794 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 16:57:51,910 p=8794 u=sandvine |  ok: [localhost]
+2017-09-18 16:57:51,913 p=8794 u=sandvine |  TASK [running hello world program from the playbook] ***************************
+2017-09-18 16:57:52,000 p=8794 u=sandvine |  changed: [localhost]
+2017-09-18 16:57:52,003 p=8794 u=sandvine |  TASK [test-role : running the script] ******************************************
+2017-09-18 16:57:52,087 p=8794 u=sandvine |  changed: [localhost]
+2017-09-18 16:57:52,091 p=8794 u=sandvine |  TASK [test-role : Verify local file] *******************************************
+2017-09-18 16:57:52,469 p=8794 u=sandvine |  ok: [localhost -> localhost]
+2017-09-18 16:57:52,472 p=8794 u=sandvine |  TASK [test-role : debug] *******************************************************
+2017-09-18 16:57:52,497 p=8794 u=sandvine |  skipping: [localhost]
+2017-09-18 16:57:52,501 p=8794 u=sandvine |  TASK [test-role : Copy file] ***************************************************
+2017-09-18 16:57:53,061 p=8794 u=sandvine |  ok: [localhost] => (item={u'stat': {u'uid': 1000, u'exists': True, u'woth': False, u'mtime': 1505766265.7860167, u'inode': 530160, u'isgid': False, u'size': 12, u'executable': False, u'isuid': False, u'readable': True, u'isreg': True, u'pw_name': u'sandvine', u'gid': 1000, u'ischr': False, u'wusr': True, u'writeable': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'sandvine', u'path': u'./testFile.py', u'xusr': False, u'atime': 1505767371.3453202, u'md5': u'e59ff97941044f85df5297e1c302d260', u'isdir': False, u'ctime': 1505766265.7860167, u'isblk': False, u'wgrp': True, u'xgrp': False, u'dev': 64769, u'roth': True, u'isfifo': False, u'mode': u'0664', u'checksum': u'648a6a6ffffdaa0badb23b8baf90b6168dd16b3a', u'islnk': False}, u'changed': False})
+2017-09-18 16:57:53,064 p=8794 u=sandvine |  TASK [test-role : debug] *******************************************************
+2017-09-18 16:57:53,096 p=8794 u=sandvine |  skipping: [localhost]
+2017-09-18 16:57:53,098 p=8794 u=sandvine |  TASK [test-role : debug] *******************************************************
+2017-09-18 16:57:53,128 p=8794 u=sandvine |  skipping: [localhost]
+2017-09-18 16:57:53,130 p=8794 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 16:57:53,130 p=8794 u=sandvine |  localhost                  : ok=5    changed=2    unreachable=0    failed=0   
+2017-09-18 18:35:32,877 p=13535 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 18:35:32,924 p=13535 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 18:35:33,634 p=13535 u=sandvine |  ok: [localhost]
+2017-09-18 18:35:33,637 p=13535 u=sandvine |  TASK [running hello world program from the playbook] ***************************
+2017-09-18 18:35:33,721 p=13535 u=sandvine |  changed: [localhost]
+2017-09-18 18:35:33,724 p=13535 u=sandvine |  TASK [copy the sample folder into other folder] ********************************
+2017-09-18 18:35:34,671 p=13535 u=sandvine |  fatal: [localhost]: FAILED! => {"changed": false, "checksum": "06c21cfb60723715396a39561455b22d28559bfe", "failed": true, "msg": "Destination directory ./saminder/inventory does not exist"}
+2017-09-18 18:35:34,673 p=13535 u=sandvine |  	to retry, use: --limit @/home/sandvine/ansible/playbook.retry
+
+2017-09-18 18:35:34,673 p=13535 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 18:35:34,673 p=13535 u=sandvine |  localhost                  : ok=2    changed=1    unreachable=0    failed=1   
+2017-09-18 18:35:47,576 p=13887 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 18:35:47,642 p=13887 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 18:35:48,293 p=13887 u=sandvine |  ok: [localhost]
+2017-09-18 18:35:48,297 p=13887 u=sandvine |  TASK [running hello world program from the playbook] ***************************
+2017-09-18 18:35:48,382 p=13887 u=sandvine |  changed: [localhost]
+2017-09-18 18:35:48,386 p=13887 u=sandvine |  TASK [copy the sample folder into other folder] ********************************
+2017-09-18 18:35:49,019 p=13887 u=sandvine |  fatal: [localhost]: FAILED! => {"changed": false, "checksum": "06c21cfb60723715396a39561455b22d28559bfe", "failed": true, "msg": "Destination directory ./saminder/inventory does not exist"}
+2017-09-18 18:35:49,022 p=13887 u=sandvine |  	to retry, use: --limit @/home/sandvine/ansible/playbook.retry
+
+2017-09-18 18:35:49,022 p=13887 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 18:35:49,022 p=13887 u=sandvine |  localhost                  : ok=2    changed=1    unreachable=0    failed=1   
+2017-09-18 18:35:57,424 p=14150 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 18:35:57,466 p=14150 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 18:35:58,115 p=14150 u=sandvine |  ok: [localhost]
+2017-09-18 18:35:58,118 p=14150 u=sandvine |  TASK [running hello world program from the playbook] ***************************
+2017-09-18 18:35:58,201 p=14150 u=sandvine |  changed: [localhost]
+2017-09-18 18:35:58,204 p=14150 u=sandvine |  TASK [copy the sample folder into other folder] ********************************
+2017-09-18 18:35:58,882 p=14150 u=sandvine |  fatal: [localhost]: FAILED! => {"changed": false, "checksum": "06c21cfb60723715396a39561455b22d28559bfe", "details": "bad symbolic permission for mode:  g=r", "failed": true, "gid": 1000, "group": "sandvine", "mode": "0664", "msg": "mode must be in octal or symbolic form", "owner": "sandvine", "path": "./saminder/inventory/hosts", "size": 1051, "state": "file", "uid": 1000}
+2017-09-18 18:35:58,885 p=14150 u=sandvine |  	to retry, use: --limit @/home/sandvine/ansible/playbook.retry
+
+2017-09-18 18:35:58,886 p=14150 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 18:35:58,886 p=14150 u=sandvine |  localhost                  : ok=2    changed=1    unreachable=0    failed=1   
+2017-09-18 18:36:47,827 p=15099 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 18:36:47,873 p=15099 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 18:36:48,562 p=15099 u=sandvine |  ok: [localhost]
+2017-09-18 18:36:48,565 p=15099 u=sandvine |  TASK [running hello world program from the playbook] ***************************
+2017-09-18 18:36:48,660 p=15099 u=sandvine |  changed: [localhost]
+2017-09-18 18:36:48,663 p=15099 u=sandvine |  TASK [copy the sample folder into other folder] ********************************
+2017-09-18 18:36:49,564 p=15099 u=sandvine |  changed: [localhost]
+2017-09-18 18:36:49,568 p=15099 u=sandvine |  TASK [test-role : running the script] ******************************************
+2017-09-18 18:36:49,653 p=15099 u=sandvine |  changed: [localhost]
+2017-09-18 18:36:49,657 p=15099 u=sandvine |  TASK [test-role : Verify local file] *******************************************
+2017-09-18 18:36:49,910 p=15099 u=sandvine |  ok: [localhost -> localhost]
+2017-09-18 18:36:49,913 p=15099 u=sandvine |  TASK [test-role : debug] *******************************************************
+2017-09-18 18:36:49,942 p=15099 u=sandvine |  skipping: [localhost]
+2017-09-18 18:36:49,945 p=15099 u=sandvine |  TASK [test-role : Copy file] ***************************************************
+2017-09-18 18:36:50,355 p=15099 u=sandvine |  ok: [localhost] => (item={u'stat': {u'uid': 1000, u'exists': True, u'woth': False, u'mtime': 1505766265.7860167, u'inode': 530160, u'isgid': False, u'size': 12, u'executable': False, u'isuid': False, u'readable': True, u'isreg': True, u'pw_name': u'sandvine', u'gid': 1000, u'ischr': False, u'wusr': True, u'writeable': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'sandvine', u'path': u'./testFile.py', u'xusr': False, u'atime': 1505767371.3453202, u'md5': u'e59ff97941044f85df5297e1c302d260', u'isdir': False, u'ctime': 1505766265.7860167, u'isblk': False, u'wgrp': True, u'xgrp': False, u'dev': 64769, u'roth': True, u'isfifo': False, u'mode': u'0664', u'checksum': u'648a6a6ffffdaa0badb23b8baf90b6168dd16b3a', u'islnk': False}, u'changed': False})
+2017-09-18 18:36:50,358 p=15099 u=sandvine |  TASK [test-role : debug] *******************************************************
+2017-09-18 18:36:50,389 p=15099 u=sandvine |  skipping: [localhost]
+2017-09-18 18:36:50,392 p=15099 u=sandvine |  TASK [test-role : debug] *******************************************************
+2017-09-18 18:36:50,418 p=15099 u=sandvine |  skipping: [localhost]
+2017-09-18 18:36:50,421 p=15099 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 18:36:50,421 p=15099 u=sandvine |  localhost                  : ok=6    changed=3    unreachable=0    failed=0   
+2017-09-18 18:37:39,580 p=16114 u=sandvine |  PLAY [all] *********************************************************************
+2017-09-18 18:37:39,629 p=16114 u=sandvine |  TASK [setup] *******************************************************************
+2017-09-18 18:37:40,313 p=16114 u=sandvine |  ok: [localhost]
+2017-09-18 18:37:40,315 p=16114 u=sandvine |  TASK [running hello world program from the playbook] ***************************
+2017-09-18 18:37:40,397 p=16114 u=sandvine |  changed: [localhost]
+2017-09-18 18:37:40,400 p=16114 u=sandvine |  TASK [copy the sample folder into other folder] ********************************
+2017-09-18 18:37:41,479 p=16114 u=sandvine |  changed: [localhost]
+2017-09-18 18:37:41,482 p=16114 u=sandvine |  TASK [test-role : running the script] ******************************************
+2017-09-18 18:37:41,575 p=16114 u=sandvine |  changed: [localhost]
+2017-09-18 18:37:41,579 p=16114 u=sandvine |  TASK [test-role : Verify local file] *******************************************
+2017-09-18 18:37:41,795 p=16114 u=sandvine |  ok: [localhost -> localhost]
+2017-09-18 18:37:41,798 p=16114 u=sandvine |  TASK [test-role : debug] *******************************************************
+2017-09-18 18:37:41,854 p=16114 u=sandvine |  skipping: [localhost]
+2017-09-18 18:37:41,857 p=16114 u=sandvine |  TASK [test-role : Copy file] ***************************************************
+2017-09-18 18:37:42,253 p=16114 u=sandvine |  ok: [localhost] => (item={u'stat': {u'uid': 1000, u'exists': True, u'woth': False, u'mtime': 1505766265.7860167, u'inode': 530160, u'isgid': False, u'size': 12, u'executable': False, u'isuid': False, u'readable': True, u'isreg': True, u'pw_name': u'sandvine', u'gid': 1000, u'ischr': False, u'wusr': True, u'writeable': True, u'xoth': False, u'rusr': True, u'nlink': 1, u'issock': False, u'rgrp': True, u'gr_name': u'sandvine', u'path': u'./testFile.py', u'xusr': False, u'atime': 1505767371.3453202, u'md5': u'e59ff97941044f85df5297e1c302d260', u'isdir': False, u'ctime': 1505766265.7860167, u'isblk': False, u'wgrp': True, u'xgrp': False, u'dev': 64769, u'roth': True, u'isfifo': False, u'mode': u'0664', u'checksum': u'648a6a6ffffdaa0badb23b8baf90b6168dd16b3a', u'islnk': False}, u'changed': False})
+2017-09-18 18:37:42,256 p=16114 u=sandvine |  TASK [test-role : debug] *******************************************************
+2017-09-18 18:37:42,284 p=16114 u=sandvine |  skipping: [localhost]
+2017-09-18 18:37:42,287 p=16114 u=sandvine |  TASK [test-role : debug] *******************************************************
+2017-09-18 18:37:42,317 p=16114 u=sandvine |  skipping: [localhost]
+2017-09-18 18:37:42,319 p=16114 u=sandvine |  PLAY RECAP *********************************************************************
+2017-09-18 18:37:42,319 p=16114 u=sandvine |  localhost                  : ok=6    changed=3    unreachable=0    failed=0   
+2017-09-18 18:43:20,943 p=21969 u=sandvine |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/home/sandvine/ansible/playbook.yml': line 25, column 6, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  post_tasks:
+   - name: removing copied files
+     ^ here
+
+
+The error appears to have been in '/home/sandvine/ansible/playbook.yml': line 25, column 6, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  post_tasks:
+   - name: removing copied files
+     ^ here
+
